@@ -50,3 +50,18 @@ No em dashes. Refuse over hallucinate. Investment/ROI frame, not cost-center. Ne
 See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 
 > Color, US Letter, 100% scale, single-sided, 80–110 lb cardstock — print the cardstock PDF; optional 2-up for cuts.
+
+## STACK B  -  Demo Assets + Polsia Destinations
+
+**Separate pack.** Operator / demo-navigation kit (GitHub refuse demo + live SettleUp / Polsia destinations). Not the primary aisle Calendly stack.
+
+| | |
+|---|---|
+| Live | https://nathanplatteruser.github.io/settleup-booth-kit/demo-assets/ |
+| Folder | `demo-assets/` |
+| FedEx PDF | `demo-assets/SettleUp-DemoAssets-QR-Cardstock.pdf` |
+| 2-up cuts | `demo-assets/SettleUp-DemoAssets-QR-2up-cut.pdf` |
+| Clerk notes | `demo-assets/FEDEX-PRINT-NOTES.md` |
+| Walkthrough | `demo-assets/WALKTHROUGH.md` |
+
+Cover label on STACK B prints: **STACK B  -  Demo Assets + Polsia Destinations (not the primary aisle Calendly stack)**. Keep physical piles separate from this folder’s Calendly/radar PDFs above.
