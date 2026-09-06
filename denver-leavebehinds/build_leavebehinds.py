@@ -433,7 +433,7 @@ def demo_ops_fte(c: canvas.Canvas, page_no: int):
     rounded_rect(c, 0.55 * inch, y - 0.85 * inch, PAGE_W - 1.1 * inch, 0.85 * inch, r=10, fill=PANEL, stroke=BORDER)
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 11)
-    c.drawString(0.75 * inch, y - 0.32 * inch, "Working range ~38–57 min/dispute  ·  mid ≈ 47–48")
+    c.drawString(0.75 * inch, y - 0.32 * inch, "Working range ~38-57  ·  demo baseline upper (~57)  ·  lunch/meetings vs 100% desk")
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10)
     c.drawString(0.75 * inch, y - 0.58 * inch, "Replaces any old “12 min working average” line.")
@@ -667,7 +667,7 @@ def convert_copy(c: canvas.Canvas):
 
     paras = [
         "Wrong dollars leaving your building is not a tooling preference. It is liability. The Dispute Queue demo showed a model that wrote $1,000 against a ledger of $20,370.53. The system checked, tried one remediation, and refused out loud.",
-        "Capacity without a gate is exposure. Olga’s locked FTE (~38–57 min/dispute mid ≈ 47–48) is the ops clock; examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
+        "Capacity without a gate is exposure. Olga’s locked FTE (~38-57; demo uses upper ~57 for human lunch/meetings) is the ops clock; examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
         "Pilot, Firm, and Letter Risk Audit are framed as investment, not a cost center. You buy a path to more volume with the same team, without shipping hallucinated balances. Proof is free to inspect. Production is your system of record, your rules, and your accountability.",
         "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. We will map Pilot or Firm or a scoped Letter Risk Audit to your shop.",
     ]
