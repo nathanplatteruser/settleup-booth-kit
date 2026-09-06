@@ -103,7 +103,7 @@
 - Never form-gate before they see the refuse.
 - Never pitch consulting before the refuse (consulting is the close).
 - Never claim measured client ROI or dollar exposure / fines.
-- Never present 12 min/dispute as a client time-study (Olga confirm pending — “working average”).
+- Never present the old “12 min working average.” Cite Olga’s locked FTE only: intake 3–5 · review ~4 · research 20–30 · draft 5–7 · compliance 3–6 · close 3–5 (~38–57 mid ≈ 47–48). Not Nathan’s shop.
 - Never invent stats — only **300 / 20 / 19 / 1** and **$1,000 vs $20,370.53**.
 - Never burn calendar on tire-kickers — QR + Day-0 email only.
 - Never attach a full proposal from the aisle.

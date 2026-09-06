@@ -78,6 +78,25 @@ a { color:var(--accent); }
   font-weight:700; color:var(--warn);
 }
 .foot { color:var(--muted); font-size:.8rem; margin-top:28px; }
+
+.ops {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px;
+  padding:14px 16px; margin:14px 0;
+}
+.ops h2 { margin:0 0 6px; font-size:1.05rem; }
+.ops .cite { color:var(--muted); font-size:.78rem; margin:0 0 10px; }
+.ops .stages { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin:0 0 10px; }
+@media (min-width:560px) { .ops .stages { grid-template-columns:repeat(6,1fr); } }
+.ops .stage { background:#121a24; border:1px solid var(--border); border-radius:10px; padding:8px 6px; text-align:center; }
+.ops .stage b { display:block; font-size:.95rem; color:var(--yes); }
+.ops .stage span { font-size:.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+.ops .sum { font-size:.88rem; margin:0 0 10px; }
+.ops .frame {
+  background:#121a24; border:1px solid var(--border); border-left:3px solid var(--hero);
+  border-radius:10px; padding:12px 14px; font-size:.88rem; color:var(--muted);
+}
+.ops .frame b { color:var(--text); }
+.ops .audit { color:var(--yes); font-size:.85rem; font-weight:650; margin:8px 0 0; }
 </style>
 </head>
 <body>
@@ -117,6 +136,26 @@ a { color:var(--accent); }
   <b>Nathan Platter</b> (SettleUp / Platter Analytics) · drives refuse-letter UI<br/>
   <b>Olga Mironova</b> (CCMR3) · ops / capacity / exam<br/>
   <b>Ralph Hall</b> (GVH) · setup / deterministic automation
+</div>
+
+
+<div class="ops" id="olga-ops">
+  <h2>Ops callout · Olga’s FTE (locked)</h2>
+  <p class="cite">CCMR3 · cite as Olga’s minutes/dispute, not a universal client time-study</p>
+  <div class="stages">
+    <div class="stage"><b>3–5</b><span>Intake</span></div>
+    <div class="stage"><b>~4</b><span>Review</span></div>
+    <div class="stage"><b>20–30</b><span>Research</span></div>
+    <div class="stage"><b>5–7</b><span>Draft</span></div>
+    <div class="stage"><b>3–6</b><span>Compliance</span></div>
+    <div class="stage"><b>3–5</b><span>Close</span></div>
+  </div>
+  <p class="sum">~38–57 min/dispute · mid ≈ 47–48. Replaces any “12 min working average” line.</p>
+  <div class="frame">
+    <b>Complaint ≠ dispute:</b>
+    complaints and disputes aren’t the same thing, but architecture doesn’t care — public complaint language, synthetic ledger; point it at your dispute queue and it’s the same metadata, just different buckets and different template letters.
+  </div>
+  <p class="audit">Audit-trail: yes.</p>
 </div>
 
 <section class="section" id="qrs">

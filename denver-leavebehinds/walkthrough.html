@@ -44,6 +44,24 @@ h1 { font-size:clamp(1.4rem,5vw,2rem); letter-spacing:-.03em; margin:0 0 8px; }
 }
 .links a.sec { background:#203044; border:1px solid var(--border); }
 .note { font-size:.85rem; color:var(--muted); margin-top:18px; }
+
+.fte {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px;
+  padding:14px 16px; margin:16px 0;
+}
+.fte h2 { margin:0 0 8px; font-size:1.05rem; }
+.fte .cite { color:var(--muted); font-size:.78rem; margin:0 0 10px; }
+.fte table { width:100%; border-collapse:collapse; font-size:.9rem; }
+.fte th, .fte td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--border); }
+.fte th { color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+.fte td.num { text-align:right; font-weight:700; color:var(--yes); font-variant-numeric:tabular-nums; }
+.fte .sum { margin:10px 0 0; font-size:.88rem; color:var(--text); }
+.frame {
+  background:#121a24; border:1px solid var(--border); border-left:3px solid var(--hero);
+  border-radius:10px; padding:12px 14px; margin:12px 0 0; font-size:.88rem; color:var(--muted);
+}
+.frame b { color:var(--text); }
+.audit { color:var(--yes); font-size:.85rem; font-weight:650; margin-top:8px; }
 </style>
 </head>
 <body>
@@ -84,7 +102,29 @@ h1 { font-size:clamp(1.4rem,5vw,2rem); letter-spacing:-.03em; margin:0 0 8px; }
   <div class="clock">22:00–30:00 · Business worth</div>
   <h3>Capacity · revenue · hours · liability</h3>
   <div class="hand">Hand to Olga if ops / exam / complaint-vs-dispute</div>
-  <p>Estimates from verified run, not anyone’s shop. Olga owns ops and exam reality.</p>
+  <p>Cite Olga’s FTE breakdown (not Nathan’s shop, not a universal time-study). Verified-run estimates stay separate. She owns ops and exam reality.</p>
+</div>
+
+<div class="fte" id="olga-fte">
+  <h2>Olga’s FTE minutes / dispute (locked)</h2>
+  <p class="cite">CCMR3 AVP Operations · Dispute Queue co-panel · cite as Olga’s ranges</p>
+  <table>
+    <thead><tr><th>Stage</th><th style="text-align:right">Minutes</th></tr></thead>
+    <tbody>
+      <tr><td>Intake</td><td class="num">3–5</td></tr>
+      <tr><td>Review</td><td class="num">~4</td></tr>
+      <tr><td>Research</td><td class="num">20–30</td></tr>
+      <tr><td>Draft</td><td class="num">5–7</td></tr>
+      <tr><td>Compliance</td><td class="num">3–6</td></tr>
+      <tr><td>Close</td><td class="num">3–5</td></tr>
+    </tbody>
+  </table>
+  <p class="sum">Working range ~38–57 min/dispute · mid ≈ 47–48 (not the old “12 min working average”).</p>
+  <div class="frame">
+    <b>Complaint ≠ dispute (Olga framing):</b>
+    complaints and disputes aren’t the same thing, but architecture doesn’t care — public complaint language, synthetic ledger; point it at your own dispute queue and it’s the same metadata, just different buckets and different template letters.
+  </div>
+  <p class="audit">Audit-trail: yes (Olga confirmed).</p>
 </div>
 <div class="beat">
   <div class="clock">30:00–35:00 · Make / buy</div>

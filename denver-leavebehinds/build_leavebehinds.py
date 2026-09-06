@@ -391,6 +391,78 @@ def demo_qr_card(c: canvas.Canvas, title, why, url, slug, page_no, index, total)
     c.showPage()
 
 
+
+def demo_ops_fte(c: canvas.Canvas, page_no: int):
+    """Olga locked FTE + complaint≠dispute framing (ops callout)."""
+    draw_bg(c)
+    c.setFillColor(YES)
+    c.setFont("Helvetica-Bold", 10)
+    c.drawString(0.55 * inch, PAGE_H - 0.55 * inch, "OPS CALLOUT  ·  OLGA LOCKED")
+    c.setFillColor(TEXT)
+    c.setFont("Helvetica-Bold", 18)
+    c.drawString(0.55 * inch, PAGE_H - 0.9 * inch, "FTE minutes per dispute")
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 10)
+    c.drawString(0.55 * inch, PAGE_H - 1.15 * inch, "Cite as Olga Mironova (CCMR3) ranges — not Nathan’s shop, not a universal time-study.")
+
+    stages = [
+        ("Intake", "3–5"),
+        ("Review", "~4"),
+        ("Research", "20–30"),
+        ("Draft", "5–7"),
+        ("Compliance", "3–6"),
+        ("Close", "3–5"),
+    ]
+    # stage cards in 2 rows of 3
+    card_w = (PAGE_W - 1.3 * inch) / 3
+    card_h = 0.95 * inch
+    y0 = PAGE_H - 1.45 * inch
+    for i, (name, mins) in enumerate(stages):
+        row, col = divmod(i, 3)
+        x = 0.55 * inch + col * (card_w + 0.1 * inch)
+        y = y0 - row * (card_h + 0.12 * inch) - card_h
+        rounded_rect(c, x, y, card_w, card_h, r=10, fill=PANEL, stroke=BORDER)
+        c.setFillColor(MUTED)
+        c.setFont("Helvetica-Bold", 9)
+        c.drawCentredString(x + card_w / 2, y + card_h - 0.28 * inch, name.upper())
+        c.setFillColor(YES)
+        c.setFont("Helvetica-Bold", 20)
+        c.drawCentredString(x + card_w / 2, y + 0.28 * inch, mins)
+
+    y = y0 - 2 * (card_h + 0.12 * inch) - 0.15 * inch
+    rounded_rect(c, 0.55 * inch, y - 0.85 * inch, PAGE_W - 1.1 * inch, 0.85 * inch, r=10, fill=PANEL, stroke=BORDER)
+    c.setFillColor(TEXT)
+    c.setFont("Helvetica-Bold", 11)
+    c.drawString(0.75 * inch, y - 0.32 * inch, "Working range ~38–57 min/dispute  ·  mid ≈ 47–48")
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 10)
+    c.drawString(0.75 * inch, y - 0.58 * inch, "Replaces any old “12 min working average” line.")
+
+    # framing quote
+    y2 = y - 1.15 * inch
+    rounded_rect(c, 0.55 * inch, 1.35 * inch, PAGE_W - 1.1 * inch, y2 - 1.35 * inch, r=10, fill=PANEL, stroke=HERO)
+    c.setFillColor(HERO)
+    c.setFont("Helvetica-Bold", 10)
+    c.drawString(0.75 * inch, y2 - 0.28 * inch, "COMPLAINT ≠ DISPUTE  ·  OLGA FRAMING")
+    frame = (
+        "Complaints and disputes aren’t the same thing, but architecture doesn’t care — "
+        "public complaint language, synthetic ledger; point it at your own dispute queue "
+        "and it’s the same metadata, just different buckets and different template letters."
+    )
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 10)
+    yy = y2 - 0.55 * inch
+    for ln in wrap_text(c, frame, "Helvetica", 10, PAGE_W - 1.7 * inch):
+        c.drawString(0.75 * inch, yy, ln)
+        yy -= 0.18 * inch
+    c.setFillColor(YES)
+    c.setFont("Helvetica-Bold", 10)
+    c.drawString(0.75 * inch, 1.55 * inch, "Audit-trail: yes (Olga confirmed).")
+
+    draw_footer(c, "STACK DEMO", page_no)
+    c.showPage()
+
+
 def demo_proof_back(c: canvas.Canvas, page_no: int):
     draw_bg(c)
     c.setFillColor(TEXT)
@@ -441,7 +513,8 @@ def build_demo_pdf(path: Path):
     n = len(DEMO_LINKS)
     for i, (title, why, url, slug) in enumerate(DEMO_LINKS, start=1):
         demo_qr_card(c, title, why, url, slug, page_no=2 + i, index=i, total=n)
-    demo_proof_back(c, page_no=3 + n)
+    demo_ops_fte(c, page_no=3 + n)
+    demo_proof_back(c, page_no=4 + n)
     c.save()
     print("wrote", path)
 
@@ -594,7 +667,7 @@ def convert_copy(c: canvas.Canvas):
 
     paras = [
         "Wrong dollars leaving your building is not a tooling preference. It is liability. The Dispute Queue demo showed a model that wrote $1,000 against a ledger of $20,370.53. The system checked, tried one remediation, and refused out loud.",
-        "Capacity without a gate is exposure. Ops teams already know the minutes-per-dispute math. Examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
+        "Capacity without a gate is exposure. Olga’s locked FTE (~38–57 min/dispute mid ≈ 47–48) is the ops clock; examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
         "Pilot, Firm, and Letter Risk Audit are framed as investment, not a cost center. You buy a path to more volume with the same team, without shipping hallucinated balances. Proof is free to inspect. Production is your system of record, your rules, and your accountability.",
         "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. We will map Pilot or Firm or a scoped Letter Risk Audit to your shop.",
     ]
