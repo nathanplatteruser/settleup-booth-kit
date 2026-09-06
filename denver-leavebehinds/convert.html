@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#0f1419"/>
+<title>STACK CONVERT · SettleUp Collections leave-behind</title>
+<style>
+:root {
+  --bg:#0f1419; --panel:#1a2332; --border:#2a3544; --text:#e7ecf3; --muted:#8b9bb4;
+  --accent:#5b9fd4; --on:#2d6cdf; --yes:#3ecf8e; --warn:#fbbf24; --bad:#f87171; --hero:#f0a020;
+}
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body {
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.45;
+  padding: max(12px, env(safe-area-inset-top)) 14px 96px;
+}
+a { color:var(--accent); }
+.brand { display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between; margin-bottom:12px; }
+.mark { font-weight:800; letter-spacing:-.02em; }
+.mark span { color:var(--accent); }
+.pill { font-size:.72rem; font-weight:700; padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:var(--muted); background:#121a24; }
+.pill.demo { color:var(--yes); border-color:#14532d; background:#0f2418; }
+.pill.convert { color:var(--hero); border-color:#a16207; background:#3a2e12; }
+.hero {
+  background:linear-gradient(160deg,#1a2332 0%,#121a24 55%,#1a1520 100%);
+  border:1px solid var(--border); border-radius:18px; padding:22px 18px 20px; margin-bottom:14px;
+}
+.eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.7rem; font-weight:800; margin:0 0 8px; }
+.eyebrow.demo { color:var(--yes); }
+.eyebrow.convert { color:var(--hero); }
+.hero h1 { margin:0 0 10px; font-size:clamp(1.35rem,5vw,2.1rem); line-height:1.12; letter-spacing:-.03em; }
+.subline { color:var(--muted); font-size:.9rem; margin:10px 0 0; }
+.mismatch { display:grid; grid-template-columns:1fr auto 1fr; gap:8px; margin:14px 0 12px; }
+.box { background:#0f1419; border:1px solid var(--border); border-radius:12px; padding:12px; text-align:center; }
+.box.bad { border-color:#7f1d1d; } .box.good { border-color:#14532d; }
+.box .k { font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700; }
+.box .v { font-size:clamp(1.05rem,4vw,1.45rem); font-weight:800; margin-top:4px; }
+.box.bad .v { color:var(--bad); } .box.good .v { color:var(--yes); }
+.vs { align-self:center; font-weight:800; color:var(--muted); font-size:.8rem; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:8px; }
+.stat { background:#121a24; border:1px solid var(--border); border-radius:10px; padding:8px 6px; text-align:center; }
+.stat b { display:block; font-size:1.05rem; }
+.stat span { font-size:.62rem; color:var(--muted); text-transform:uppercase; }
+.shots { display:grid; gap:12px; margin:16px 0; }
+.shots figure { margin:0; background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+.shots img { width:100%; display:block; }
+.shots figcaption { padding:10px 12px; font-size:.82rem; color:var(--muted); }
+.section { margin:22px 0; }
+.section h2 { margin:0 0 8px; font-size:1.15rem; }
+.section .lead { color:var(--muted); font-size:.9rem; margin:0 0 12px; }
+.tiles { display:grid; gap:12px; }
+@media (min-width:720px) { .tiles { grid-template-columns:1fr 1fr; } }
+.tile {
+  background:var(--panel); border:1px solid var(--border); border-radius:16px;
+  padding:16px; display:grid; gap:12px;
+}
+@media (min-width:480px) { .tile { grid-template-columns:140px 1fr; align-items:center; } }
+.tile.primary { border-color:#a16207; box-shadow:0 0 0 1px rgba(240,160,32,.25); }
+.tile .qrwrap { background:#fff; border-radius:12px; padding:10px; width:140px; height:140px; display:flex; align-items:center; justify-content:center; margin:0 auto; }
+.tile img.qr { width:120px; height:120px; display:block; }
+.tile h3 { margin:0 0 4px; font-size:1.05rem; }
+.tile p.why { margin:0 0 8px; color:var(--muted); font-size:.88rem; }
+.tile .url { font-size:.72rem; color:var(--accent); word-break:break-all; margin:0 0 10px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:48px; padding:12px 16px; border-radius:12px; border:0;
+  background:var(--on); color:#fff; font-weight:800; font-size:.95rem; text-decoration:none; width:100%;
+}
+.btn.hero { background:#b45309; }
+.btn.secondary { background:#203044; border:1px solid var(--border); }
+.credits { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.9rem; color:var(--muted); }
+.credits b { color:var(--text); }
+.price {
+  background:#3a2e12; border:1px solid #a16207; border-radius:14px; padding:14px 16px; margin:14px 0;
+  font-weight:700; color:var(--warn);
+}
+.foot { color:var(--muted); font-size:.8rem; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="brand">
+  <div class="mark">Settle<span>Up</span> Collections</div>
+  <span class="pill convert">STACK CONVERT · after the demo</span>
+</div>
+<section class="hero">
+  <p class="eyebrow convert">STACK CONVERT — SettleUp Collections · after the demo</p>
+  <h1>Stay in the backpack. Convert to a conversation.</h1>
+  <p class="subline">Nathan Platter · Principal, Analytics &amp; AI · SettleUp Collections · Platter Analytics</p>
+  <div class="mismatch">
+    <div class="box bad"><div class="k">Model wrote</div><div class="v">$1,000</div></div>
+    <div class="vs">vs</div>
+    <div class="box good"><div class="k">Ledger</div><div class="v">$20,370.53</div></div>
+  </div>
+</section>
+
+<div class="shots">
+  <figure>
+    <img src="shots/app-remediation.png" alt="Same refuse gate remediation screenshot"/>
+    <figcaption>You saw this refuse gate with Nathan, Olga, and Ralph.</figcaption>
+  </figure>
+</div>
+
+<div class="price">Pilot $499/mo · Firm $1,299/mo · Letter Risk Audit $2,500</div>
+
+<p class="subline" style="margin:0 0 14px">Wrong dollars leaving your building is liability. Capacity without a gate is exposure. Pilot / Firm / Audit are investment, not a cost center. Book a 20-min walkthrough or find Nathan onsite.</p>
+
+<section class="section" id="qrs">
+  <h2>Conversion QR wall</h2>
+  <p class="lead">Self-serving links. Primary CTA is Book Nathan.</p>
+  <div class="tiles">
+  <article class="tile primary">
+    <div class="qrwrap"><img class="qr" src="qrs/book-calendly.png" alt="QR Book Nathan (PRIMARY)"/></div>
+    <div>
+      <h3>Book Nathan (PRIMARY)</h3>
+      <p class="why">20-min walkthrough · Calendly</p>
+      <p class="url">https://calendly.com/nathanplatter</p>
+      <a class="btn hero" href="https://calendly.com/nathanplatter">Book now</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/home.png" alt="QR SettleUp home"/></div>
+    <div>
+      <h3>SettleUp home</h3>
+      <p class="why">settleupcollections.com</p>
+      <p class="url">https://settleupcollections.com/</p>
+      <a class="btn" href="https://settleupcollections.com/">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/pricing.png" alt="QR Pricing"/></div>
+    <div>
+      <h3>Pricing</h3>
+      <p class="why">Pilot · Firm · Audit</p>
+      <p class="url">https://settleupcollections.com/pricing</p>
+      <a class="btn" href="https://settleupcollections.com/pricing">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/audit.png" alt="QR Letter Risk Audit"/></div>
+    <div>
+      <h3>Letter Risk Audit</h3>
+      <p class="why">Consulting SKU · $2,500</p>
+      <p class="url">https://settleupcollections.com/audit</p>
+      <a class="btn" href="https://settleupcollections.com/audit">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/everything.png" alt="QR Free tools / Everything"/></div>
+    <div>
+      <h3>Free tools / Everything</h3>
+      <p class="why">Demos + tools hub</p>
+      <p class="url">https://settleupcollections.com/everything</p>
+      <a class="btn" href="https://settleupcollections.com/everything">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/risk-scan.png" alt="QR Risk scan lead magnet"/></div>
+    <div>
+      <h3>Risk scan lead magnet</h3>
+      <p class="why">Quick letter-risk scan</p>
+      <p class="url">https://settleupcollections.com/risk-scan</p>
+      <a class="btn" href="https://settleupcollections.com/risk-scan">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/qr-hub.png" alt="QR Conference QR hub"/></div>
+    <div>
+      <h3>Conference QR hub</h3>
+      <p class="why">Staff / booth bookmark</p>
+      <p class="url">https://settleupcollections.com/qr</p>
+      <a class="btn" href="https://settleupcollections.com/qr">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/brainstorm.png" alt="QR Brainstorm hub"/></div>
+    <div>
+      <h3>Brainstorm hub</h3>
+      <p class="why">Event landing</p>
+      <p class="url">https://settleupcollections.com/brainstorm</p>
+      <a class="btn" href="https://settleupcollections.com/brainstorm">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/demo-recall.png" alt="QR Demo recall (DEMO-OUTPUT)"/></div>
+    <div>
+      <h3>Demo recall (DEMO-OUTPUT)</h3>
+      <p class="why">Reconnect to what you saw</p>
+      <p class="url">https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html</p>
+      <a class="btn" href="https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/waitlist.png" alt="QR Waitlist"/></div>
+    <div>
+      <h3>Waitlist</h3>
+      <p class="why">Optional · stay in the loop</p>
+      <p class="url">https://settleupcollections.com/waitlist</p>
+      <a class="btn" href="https://settleupcollections.com/waitlist">Open</a>
+    </div>
+  </article>
+  </div>
+</section>
+
+<p class="foot">SettleUp Collections · Brainstorm 2026 Denver · PDF: SettleUp-Collections-Conversion-Leavebehind.pdf · Exclusive SettleUp Collections (never Marketplace, never Dell)</p>
+</body>
+</html>

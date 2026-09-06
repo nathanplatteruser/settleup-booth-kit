@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#0f1419"/>
+<title>STACK DEMO · Dispute Queue Demo ONLY · SettleUp Collections</title>
+<style>
+:root {
+  --bg:#0f1419; --panel:#1a2332; --border:#2a3544; --text:#e7ecf3; --muted:#8b9bb4;
+  --accent:#5b9fd4; --on:#2d6cdf; --yes:#3ecf8e; --warn:#fbbf24; --bad:#f87171; --hero:#f0a020;
+}
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body {
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.45;
+  padding: max(12px, env(safe-area-inset-top)) 14px 96px;
+}
+a { color:var(--accent); }
+.brand { display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between; margin-bottom:12px; }
+.mark { font-weight:800; letter-spacing:-.02em; }
+.mark span { color:var(--accent); }
+.pill { font-size:.72rem; font-weight:700; padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:var(--muted); background:#121a24; }
+.pill.demo { color:var(--yes); border-color:#14532d; background:#0f2418; }
+.pill.convert { color:var(--hero); border-color:#a16207; background:#3a2e12; }
+.hero {
+  background:linear-gradient(160deg,#1a2332 0%,#121a24 55%,#1a1520 100%);
+  border:1px solid var(--border); border-radius:18px; padding:22px 18px 20px; margin-bottom:14px;
+}
+.eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.7rem; font-weight:800; margin:0 0 8px; }
+.eyebrow.demo { color:var(--yes); }
+.eyebrow.convert { color:var(--hero); }
+.hero h1 { margin:0 0 10px; font-size:clamp(1.35rem,5vw,2.1rem); line-height:1.12; letter-spacing:-.03em; }
+.subline { color:var(--muted); font-size:.9rem; margin:10px 0 0; }
+.mismatch { display:grid; grid-template-columns:1fr auto 1fr; gap:8px; margin:14px 0 12px; }
+.box { background:#0f1419; border:1px solid var(--border); border-radius:12px; padding:12px; text-align:center; }
+.box.bad { border-color:#7f1d1d; } .box.good { border-color:#14532d; }
+.box .k { font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700; }
+.box .v { font-size:clamp(1.05rem,4vw,1.45rem); font-weight:800; margin-top:4px; }
+.box.bad .v { color:var(--bad); } .box.good .v { color:var(--yes); }
+.vs { align-self:center; font-weight:800; color:var(--muted); font-size:.8rem; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:8px; }
+.stat { background:#121a24; border:1px solid var(--border); border-radius:10px; padding:8px 6px; text-align:center; }
+.stat b { display:block; font-size:1.05rem; }
+.stat span { font-size:.62rem; color:var(--muted); text-transform:uppercase; }
+.shots { display:grid; gap:12px; margin:16px 0; }
+.shots figure { margin:0; background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+.shots img { width:100%; display:block; }
+.shots figcaption { padding:10px 12px; font-size:.82rem; color:var(--muted); }
+.section { margin:22px 0; }
+.section h2 { margin:0 0 8px; font-size:1.15rem; }
+.section .lead { color:var(--muted); font-size:.9rem; margin:0 0 12px; }
+.tiles { display:grid; gap:12px; }
+@media (min-width:720px) { .tiles { grid-template-columns:1fr 1fr; } }
+.tile {
+  background:var(--panel); border:1px solid var(--border); border-radius:16px;
+  padding:16px; display:grid; gap:12px;
+}
+@media (min-width:480px) { .tile { grid-template-columns:140px 1fr; align-items:center; } }
+.tile.primary { border-color:#a16207; box-shadow:0 0 0 1px rgba(240,160,32,.25); }
+.tile .qrwrap { background:#fff; border-radius:12px; padding:10px; width:140px; height:140px; display:flex; align-items:center; justify-content:center; margin:0 auto; }
+.tile img.qr { width:120px; height:120px; display:block; }
+.tile h3 { margin:0 0 4px; font-size:1.05rem; }
+.tile p.why { margin:0 0 8px; color:var(--muted); font-size:.88rem; }
+.tile .url { font-size:.72rem; color:var(--accent); word-break:break-all; margin:0 0 10px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:48px; padding:12px 16px; border-radius:12px; border:0;
+  background:var(--on); color:#fff; font-weight:800; font-size:.95rem; text-decoration:none; width:100%;
+}
+.btn.hero { background:#b45309; }
+.btn.secondary { background:#203044; border:1px solid var(--border); }
+.credits { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.9rem; color:var(--muted); }
+.credits b { color:var(--text); }
+.price {
+  background:#3a2e12; border:1px solid #a16207; border-radius:14px; padding:14px 16px; margin:14px 0;
+  font-weight:700; color:var(--warn);
+}
+.foot { color:var(--muted); font-size:.8rem; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="brand">
+  <div class="mark">Settle<span>Up</span> Collections</div>
+  <span class="pill demo">STACK DEMO · no sales CTAs</span>
+</div>
+<section class="hero">
+  <p class="eyebrow demo">STACK DEMO — Dispute Queue (Nathan · Olga · Ralph)</p>
+  <h1>Re-open what you saw</h1>
+  <p class="subline">Brainstorm 2026 Denver · SettleUp Collections · demo assets only. No Calendly. No pricing. No marketing CTAs.</p>
+  <div class="mismatch">
+    <div class="box bad"><div class="k">Model wrote</div><div class="v">$1,000</div></div>
+    <div class="vs">vs</div>
+    <div class="box good"><div class="k">Ledger</div><div class="v">$20,370.53</div></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>300</b><span>checked</span></div>
+    <div class="stat"><b>20</b><span>remediate</span></div>
+    <div class="stat"><b>19</b><span>fixed</span></div>
+    <div class="stat"><b>1</b><span>refused</span></div>
+  </div>
+</section>
+
+<div class="shots">
+  <figure>
+    <img src="shots/app-remediation.png" alt="Remediation refused letter LTR-300-REFUSED"/>
+    <figcaption>What you saw on screen · Remediation · LTR-300-REFUSED (primary visual recall)</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/app-console.png" alt="Operations dashboard console"/>
+    <figcaption>Ops / dashboard board · /app?booth=1</figcaption>
+  </figure>
+</div>
+
+<div class="credits">
+  <b>Nathan Platter</b> (SettleUp / Platter Analytics) · drives refuse-letter UI<br/>
+  <b>Olga Mironova</b> (CCMR3) · ops / capacity / exam<br/>
+  <b>Ralph Hall</b> (GVH) · setup / deterministic automation
+</div>
+
+<section class="section" id="qrs">
+  <h2>Demo QR wall</h2>
+  <p class="lead">Scan or tap. Demo assets only.</p>
+  <div class="tiles">
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/demo-letter.png" alt="QR Open the letter demo"/></div>
+    <div>
+      <h3>Open the letter demo</h3>
+      <p class="why">DEMO-OUTPUT · LTR-300-REFUSED</p>
+      <p class="url">https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html</p>
+      <a class="btn" href="https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/demo-repo.png" alt="QR GitHub dispute-agent-demo"/></div>
+    <div>
+      <h3>GitHub dispute-agent-demo</h3>
+      <p class="why">Source repo · README · sandbox</p>
+      <p class="url">https://github.com/nathanplatteruser/dispute-agent-demo</p>
+      <a class="btn" href="https://github.com/nathanplatteruser/dispute-agent-demo">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/demo-pages.png" alt="QR Demo Pages home"/></div>
+    <div>
+      <h3>Demo Pages home</h3>
+      <p class="why">Public GitHub Pages for the demo</p>
+      <p class="url">https://nathanplatteruser.github.io/dispute-agent-demo/</p>
+      <a class="btn" href="https://nathanplatteruser.github.io/dispute-agent-demo/">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/walkthrough.png" alt="QR Session walkthrough"/></div>
+    <div>
+      <h3>Session walkthrough</h3>
+      <p class="why">Nathan · Olga · Ralph beats</p>
+      <p class="url">https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/walkthrough.html</p>
+      <a class="btn" href="https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/walkthrough.html">Open</a>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="qrwrap"><img class="qr" src="qrs/demo-screen.png" alt="QR This demo QR wall"/></div>
+    <div>
+      <h3>This demo QR wall</h3>
+      <p class="why">iPhone-friendly demo assets only</p>
+      <p class="url">https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/demo-only.html</p>
+      <a class="btn" href="https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/demo-only.html">Open</a>
+    </div>
+  </article>
+  </div>
+</section>
+
+<p class="foot">Refuse over hallucinate · SettleUp Collections · Brainstorm 2026 Denver · PDF: SettleUp-DisputeQueue-Demo-ONLY.pdf</p>
+</body>
+</html>

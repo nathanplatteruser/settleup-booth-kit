@@ -65,3 +65,23 @@ See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 | Walkthrough | `demo-assets/WALKTHROUGH.md` |
 
 Cover label on STACK B prints: **STACK B  -  Demo Assets + Polsia Destinations (not the primary aisle Calendly stack)**. Keep physical piles separate from this folder’s Calendly/radar PDFs above.
+
+## STACK DENVER LEAVE-BEHINDS  -  DEMO ONLY + CONVERT
+
+**New separate FedEx piles.** Do not mix with Stack A or Stack B above.
+
+| | |
+|---|---|
+| Live folder | https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/ |
+| Local folder | `denver-leavebehinds/` |
+| **DEMO PDF** | `denver-leavebehinds/SettleUp-DisputeQueue-Demo-ONLY.pdf` (+ optional 2-up) |
+| **CONVERT PDF** | `denver-leavebehinds/SettleUp-Collections-Conversion-Leavebehind.pdf` (+ optional 2-up) |
+| Demo screen | https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/demo-only.html |
+| Convert screen | https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/convert.html |
+| Walkthrough | https://nathanplatteruser.github.io/settleup-booth-kit/denver-leavebehinds/walkthrough.html |
+| Clerk notes | `denver-leavebehinds/FEDEX-DEMO-ONLY.md` · `denver-leavebehinds/FEDEX-CONVERT.md` |
+
+- **STACK DEMO**: Nathan · Olga · Ralph Dispute Queue demo assets only (zero Calendly/pricing/marketing QRs). Embeds remediation + ops console screenshots.
+- **STACK CONVERT**: after-demo backpack leave-behind with Calendly primary + SettleUp Collections conversion QRs; reuses the same refuse-gate screenshot for recall.
+
+Exclusively SettleUp Collections for Denver. Keep physical piles labeled and separate from Stack A / Stack B.
