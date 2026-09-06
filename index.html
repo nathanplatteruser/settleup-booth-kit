@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#0f1419"/>
+<title>SettleUp Booth Kit · Brainstorm 2026 Denver</title>
+<style>
+:root {
+  --bg:#0f1419; --panel:#1a2332; --border:#2a3544; --text:#e7ecf3; --muted:#8b9bb4;
+  --accent:#5b9fd4; --on:#2d6cdf; --yes:#3ecf8e; --warn:#fbbf24; --bad:#f87171;
+  --hero:#f0a020;
+}
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.45;
+  padding: max(12px, env(safe-area-inset-top)) 14px 96px;
+}
+a { color:var(--accent); }
+.brand {
+  display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between;
+  margin-bottom:12px;
+}
+.brand .mark {
+  font-weight:800; letter-spacing:-.02em; font-size:1.05rem;
+}
+.brand .mark span { color:var(--accent); }
+.pill {
+  font-size:.72rem; font-weight:700; padding:6px 10px; border-radius:999px;
+  border:1px solid var(--border); color:var(--muted); background:#121a24;
+}
+.hero {
+  background:linear-gradient(160deg,#1a2332 0%,#121a24 55%,#1a1520 100%);
+  border:1px solid var(--border); border-radius:18px; padding:22px 18px 20px;
+  margin-bottom:14px; position:relative; overflow:hidden;
+}
+.hero::after {
+  content:""; position:absolute; inset:auto -20% -40% 40%; height:180px;
+  background:radial-gradient(circle, rgba(45,108,223,.25), transparent 70%);
+  pointer-events:none;
+}
+.eyebrow {
+  text-transform:uppercase; letter-spacing:.08em; font-size:.7rem; font-weight:800;
+  color:var(--hero); margin:0 0 8px;
+}
+.hero h1 {
+  margin:0 0 10px; font-size:clamp(1.55rem, 5.5vw, 2.4rem); line-height:1.12;
+  letter-spacing:-.03em;
+}
+.hero h1 em { font-style:normal; color:var(--yes); }
+.mismatch {
+  display:grid; grid-template-columns:1fr auto 1fr; gap:8px; align-items:stretch;
+  margin:14px 0 12px;
+}
+.box {
+  background:#0f1419; border:1px solid var(--border); border-radius:12px; padding:12px;
+  text-align:center;
+}
+.box.bad { border-color:#7f1d1d; }
+.box.good { border-color:#14532d; }
+.box .k { font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700; }
+.box .v { font-size:clamp(1.15rem, 4vw, 1.6rem); font-weight:800; margin-top:4px; }
+.box.bad .v { color:var(--bad); }
+.box.good .v { color:var(--yes); }
+.vs {
+  align-self:center; font-weight:800; color:var(--muted); font-size:.8rem;
+}
+.stats {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:8px;
+}
+.stat {
+  background:#121a24; border:1px solid var(--border); border-radius:10px; padding:8px 6px; text-align:center;
+}
+.stat b { display:block; font-size:1.05rem; }
+.stat span { font-size:.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+.subline { color:var(--muted); font-size:.9rem; margin:10px 0 0; }
+.nav {
+  position:sticky; top:0; z-index:40; margin:0 -14px 14px; padding:8px 14px 10px;
+  background:rgba(15,20,25,.94); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.chips {
+  display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:2px;
+}
+.chip {
+  flex:0 0 auto; min-height:44px; padding:10px 14px; border-radius:999px;
+  border:1px solid var(--border); background:#152031; color:var(--text);
+  font-size:.86rem; font-weight:700; cursor:pointer; text-decoration:none;
+}
+.chip:hover, .chip:focus { background:var(--on); border-color:#6eb0ff; outline:none; }
+.section { margin:22px 0; scroll-margin-top:72px; }
+.section h2 {
+  margin:0 0 8px; font-size:1.15rem; letter-spacing:-.02em;
+}
+.section .lead { color:var(--muted); font-size:.9rem; margin:0 0 12px; }
+.tiles {
+  display:grid; gap:12px;
+}
+@media (min-width:720px) {
+  .tiles { grid-template-columns:1fr 1fr; }
+  .stats { gap:10px; }
+}
+.tile {
+  background:var(--panel); border:1px solid var(--border); border-radius:16px;
+  padding:16px; display:grid; gap:12px;
+}
+@media (min-width:480px) {
+  .tile { grid-template-columns:140px 1fr; align-items:center; }
+}
+.tile .qrwrap {
+  background:#fff; border-radius:12px; padding:10px; width:140px; height:140px;
+  display:flex; align-items:center; justify-content:center; margin:0 auto;
+}
+.tile img.qr { width:120px; height:120px; display:block; }
+.tile h3 { margin:0 0 4px; font-size:1.05rem; }
+.tile p.why { margin:0 0 8px; color:var(--muted); font-size:.88rem; }
+.tile .url {
+  font-size:.72rem; color:var(--accent); word-break:break-all; margin:0 0 10px;
+}
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  min-height:48px; padding:12px 16px; border-radius:12px; border:0;
+  background:var(--on); color:#fff; font-weight:800; font-size:.95rem;
+  text-decoration:none; cursor:pointer; width:100%;
+}
+.btn.secondary { background:#203044; border:1px solid var(--border); }
+.btn.warn { background:#3a2e12; color:var(--warn); border:1px solid #a16207; }
+.pricing {
+  display:grid; gap:10px;
+}
+@media (min-width:720px) { .pricing { grid-template-columns:repeat(3,1fr); } }
+.price {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px;
+}
+.price.featured { border-color:#6eb0ff; box-shadow:0 0 0 1px rgba(45,108,223,.35); }
+.price .tag {
+  display:inline-block; font-size:.68rem; font-weight:800; text-transform:uppercase;
+  letter-spacing:.05em; color:var(--accent); margin-bottom:6px;
+}
+.price h3 { margin:0 0 4px; font-size:1.1rem; }
+.price .amt { font-size:1.6rem; font-weight:800; margin:6px 0; }
+.price .amt span { font-size:.85rem; color:var(--muted); font-weight:650; }
+.price ul { margin:8px 0 0; padding-left:1.1rem; color:var(--muted); font-size:.88rem; }
+.price li { margin:4px 0; }
+.proof {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px;
+}
+.proof .big { font-size:1.35rem; font-weight:800; margin:0 0 8px; }
+.proof ul { margin:8px 0 0; padding-left:1.1rem; color:var(--muted); }
+.script {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:4px 14px 10px;
+  margin-top:12px;
+}
+.script summary {
+  min-height:48px; display:flex; align-items:center; cursor:pointer; font-weight:800;
+}
+.script-body { color:var(--muted); font-size:.9rem; }
+.script-body .hook { color:var(--text); }
+.script-body ol { padding-left:1.2rem; }
+.actions {
+  display:grid; gap:10px; margin-top:16px;
+}
+@media (min-width:520px) { .actions { grid-template-columns:1fr 1fr; } }
+.wall-note {
+  font-size:.85rem; color:var(--muted); margin:0 0 10px;
+}
+footer {
+  margin-top:28px; color:var(--muted); font-size:.75rem; border-top:1px solid var(--border);
+  padding-top:14px;
+}
+@media print {
+  body { background:#fff; color:#000; padding:12px; }
+  .nav, .actions, .script { display:none !important; }
+  .hero, .tile, .price, .proof { break-inside:avoid; border-color:#ccc; background:#fff; }
+  a { color:#000; }
+  .chip { display:none; }
+}
+</style>
+</head>
+<body>
+<div class="brand">
+  <div class="mark">SettleUp <span>Collections</span></div>
+  <div class="pill">Brainstorm 2026 Denver · Platter Analytics</div>
+</div>
+
+<section class="hero" id="top">
+  <p class="eyebrow">Refuse over hallucinate</p>
+  <h1>We <em>refused</em>. Wrong dollars don’t leave the building.</h1>
+  <div class="mismatch">
+    <div class="box bad">
+      <div class="k">Model wrote</div>
+      <div class="v">$1,000</div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="box good">
+      <div class="k">Ledger truth</div>
+      <div class="v">$20,370.53</div>
+    </div>
+  </div>
+  <div class="stats" aria-label="Verified run stats">
+    <div class="stat"><b>300</b><span>drafted</span></div>
+    <div class="stat"><b>20</b><span>blocked</span></div>
+    <div class="stat"><b>19</b><span>remediated</span></div>
+    <div class="stat"><b>1</b><span>hard refuse</span></div>
+  </div>
+  <p class="subline">Letter-risk gate for collections dispute responses. Investment frame: capacity you can defend - not a cost center that ships unsupported facts.</p>
+</section>
+
+<nav class="nav" aria-label="Jump">
+  <div class="chips">
+    <a class="chip" href="#demo">Demo</a>
+    <a class="chip" href="#book">Book</a>
+    <a class="chip" href="#pricing">Pricing</a>
+    <a class="chip" href="#proof">Proof</a>
+    <a class="chip" href="#radar">Radar</a>
+    <a class="chip" href="#qrwall">QR wall</a>
+  </div>
+</nav>
+
+<section class="section" id="demo">
+  <h2>Live refused-letter demo</h2>
+  <p class="lead">Public DEMO-OUTPUT: the letter out of 300 we refused. Scan or open - no login.</p>
+  <div class="tiles">
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR to letter demo" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>Open letter demo</h3>
+        <p class="why">See $1,000 vs $20,370.53 and the hard refuse trail. Best aisle wow in under a minute.</p>
+        <p class="url">nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html</p>
+        <a class="btn" href="https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="book">
+  <h2>Book 20-min discovery</h2>
+  <p class="lead">Primary aisle CTA. Don’t buy from the aisle - walk the refuse on your stack next week.</p>
+  <div class="tiles">
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR to Calendly" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>Book discovery</h3>
+        <p class="why">Twenty minutes. Nathan Platter · Principal, Analytics &amp; AI | Revenue &amp; GTM Intelligence.</p>
+        <p class="url">calendly.com/nathanplatter</p>
+        <a class="btn warn" href="https://calendly.com/nathanplatter" target="_blank" rel="noopener">Book on Calendly</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h2>Pricing story</h2>
+  <p class="lead">ROI frame: gate capacity you can stand behind. Consulting SKU is not aisle-only.</p>
+  <div class="pricing">
+    <div class="price featured">
+      <div class="tag">Start here</div>
+      <h3>Pilot</h3>
+      <div class="amt">$499<span>/mo</span></div>
+      <ul>
+        <li>Letter-risk gate on dispute drafts</li>
+        <li>Refuse-over-hallucinate workflow</li>
+        <li>Founding window close Oct 2, 2026 CT</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="tag">Ops + counsel</div>
+      <h3>Firm</h3>
+      <div class="amt">$1,299<span>/mo</span></div>
+      <ul>
+        <li>Broader seat / workflow coverage</li>
+        <li>Production accountability path</li>
+        <li>Book discovery - don’t aisle-buy Firm cold</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="tag">Consulting SKU</div>
+      <h3>Letter Risk Audit</h3>
+      <div class="amt">$2,500</div>
+      <ul>
+        <li>One-time consulting engagement</li>
+        <li>Not an aisle-only swipe</li>
+        <li>Maps your send path to a refuse gate</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tiles" style="margin-top:12px">
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR to pricing" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>Pricing leave-behind</h3>
+        <p class="why">Phone QR lands on this section. Print cards use the same deep link.</p>
+        <p class="url">nathanplatteruser.github.io/settleup-booth-kit/#pricing</p>
+        <a class="btn secondary" href="#pricing">Jump to pricing</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="proof">
+  <h2>Proof</h2>
+  <div class="proof">
+    <p class="big">Verified run: 300 / 20 / 19 / 1</p>
+    <p>Model wrote <strong>$1,000</strong>. Ledger held <strong>$20,370.53</strong>. One remediation. Still wrong. Loud refuse - no silent patch.</p>
+    <ul>
+      <li>300 drafted · 20 blocked · 19 remediated · 1 hard refuse</li>
+      <li>Thesis: refuse over hallucinate</li>
+      <li>Synthetic demo honesty: ledger seed labeled; pattern is the product</li>
+    </ul>
+  </div>
+  
+<details class="script">
+<summary>Booth 90s cheat sheet (tap to expand)</summary>
+<div class="script-body">
+<p class="hook"><strong>Hook (0-15s):</strong> “Model wrote a thousand bucks. Ledger says twenty thousand. We didn’t send it.”</p>
+<ol>
+<li><strong>0-15s Hook</strong> - Point at refuse banner + $1,000 vs $20,370.53. No click yet.</li>
+<li><strong>15-35s Remediation</strong> - Stay on Remediation. Score F → word-diff. “One shot to fix. Still echoed the complaint. System refused out loud.”</li>
+<li><strong>35-55s Stats</strong> - 300 drafted / 20 blocked / 19 remediated / 1 hard refuse. “That’s the product.”</li>
+<li><strong>55-90s Close</strong> - One ask: “Who owns letter risk before send?” or “Scan - book discovery.” Capture name, firm, role, pain.</li>
+</ol>
+<p><strong>Never:</strong> open mega-nav marketing site · apologize for refuse · claim always-fixes · invent stats · lead with Firm $1,299 as aisle-only · say $1,499 · quote fines.</p>
+<p><strong>Recovery:</strong> ChatGPT? → “Local model, wifi off. Asset is the gate.” Wrapper? → “Gate is the product.” Pricing? → After refuse: “Pilot $499 · Firm $1,299 · book 20 min.”</p>
+</div>
+</details>
+
+</section>
+
+<section class="section" id="radar">
+  <h2>Conference radar</h2>
+  <p class="lead">People board for Brainstorm 2026 - fit, priority, founding window. Phone-first.</p>
+  <div class="tiles">
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR to radar" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>SettleUp radar</h3>
+        <p class="why">Attendee / speaker valuation board. Use for aisle targeting between demos.</p>
+        <p class="url">nathanplatteruser.github.io/brainstorm-2026-radar/</p>
+        <a class="btn" href="https://nathanplatteruser.github.io/brainstorm-2026-radar/" target="_blank" rel="noopener">Open radar</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR to Whova" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>Whova event portal</h3>
+        <p class="why">Official Brainstorm portal - agenda, attendees, session follow-ups.</p>
+        <p class="url">whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/</p>
+        <a class="btn secondary" href="https://whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/" target="_blank" rel="noopener">Open Whova</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="qrwall">
+  <h2>QR wall</h2>
+  <p class="wall-note">All on-screen codes are tappable targets. Same PNGs ship in <code>qrs/</code> for print. LinkedIn skipped (Calendly is primary CTA).</p>
+  <div class="tiles">
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR book" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>1 · Book discovery</h3>
+        <p class="why">PRIMARY aisle card.</p>
+        <p class="url">calendly.com/nathanplatter</p>
+        <a class="btn warn" href="https://calendly.com/nathanplatter" target="_blank" rel="noopener">Open Calendly</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR demo" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>2 · Letter demo</h3>
+        <p class="why">Refused letter proof.</p>
+        <p class="url">…/dispute-agent-demo/DEMO-OUTPUT.html</p>
+        <a class="btn" href="https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html" target="_blank" rel="noopener">Open demo</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR radar" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>3 · Radar</h3>
+        <p class="why">People board.</p>
+        <p class="url">…/brainstorm-2026-radar/</p>
+        <a class="btn" href="https://nathanplatteruser.github.io/brainstorm-2026-radar/" target="_blank" rel="noopener">Open radar</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR pricing" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>4 · Pricing</h3>
+        <p class="why">Pilot / Firm / Audit.</p>
+        <p class="url">…/settleup-booth-kit/#pricing</p>
+        <a class="btn secondary" href="#pricing">View pricing</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR Whova" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>5 · Whova</h3>
+        <p class="why">Event portal.</p>
+        <p class="url">whova.com/portal/…/wHydHQ8eVyTTnDjH7AKW/</p>
+        <a class="btn secondary" href="https://whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/" target="_blank" rel="noopener">Open Whova</a>
+      </div>
+    </article>
+    <article class="tile">
+      <div class="qrwrap"><img class="qr" alt="QR booth kit" src="data:image/png;base64,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"/></div>
+      <div>
+        <h3>6 · This booth kit</h3>
+        <p class="why">Share the flash page itself.</p>
+        <p class="url">nathanplatteruser.github.io/settleup-booth-kit/</p>
+        <a class="btn secondary" href="https://nathanplatteruser.github.io/settleup-booth-kit/" target="_blank" rel="noopener">Open booth kit</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="actions">
+  <button class="btn secondary" type="button" onclick="window.print()">Print this page</button>
+  <a class="btn" href="SettleUp-Brainstorm-QR-Cardstock.pdf">Open FedEx PDF stack</a>
+</div>
+
+<footer>
+  <p><strong>SettleUp Collections</strong> · Platter Analytics · Nathan Platter · Principal, Analytics &amp; AI | Revenue &amp; GTM Intelligence</p>
+  <p>Brainstorm 2026 Denver · Pilot $499/mo · Firm $1,299/mo · Letter Risk Audit $2,500 · Book calendly.com/nathanplatter</p>
+  <p>Print files: SettleUp-Brainstorm-QR-Cardstock.pdf · SettleUp-QR-2up-cut.pdf · see FEDEX-PRINT-NOTES.md</p>
+</footer>
+</body>
+</html>
