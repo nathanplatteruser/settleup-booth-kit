@@ -690,7 +690,7 @@ def convert_copy(c: canvas.Canvas):
     c.drawString(0.75 * inch, 1.25 * inch, "PRICING (LOCKED)")
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 11)
-    c.drawString(0.75 * inch, 0.95 * inch, "Pilot $499/mo   ·   Firm $1,299/mo   ·   Letter Risk Audit $2,500")
+    c.drawString(0.75 * inch, 0.95 * inch, "Pilot $499/mo   ·   SettleUp Firm $1,299/mo   ·   Letter Risk Audit $2,500")
     draw_footer(c, "STACK CONVERT", 2)
     c.showPage()
 
@@ -786,7 +786,7 @@ def convert_close(c, page_no):
         "Book a 20-minute walkthrough with Nathan.",
         "Or find him onsite at Brainstorm 2026 Denver.",
         "",
-        "Pilot $499/mo  ·  Firm $1,299/mo  ·  Letter Risk Audit $2,500",
+        "Pilot $499/mo  ·  SettleUp Firm $1,299/mo  ·  Letter Risk Audit $2,500",
         "",
         "calendly.com/nathanplatter",
         "settleupcollections.com",
