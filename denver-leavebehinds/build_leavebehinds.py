@@ -81,8 +81,8 @@ CONVERT_LINKS = [
     ),
     (
         "SettleUp home",
-        "settleupcollections.com",
-        "https://settleupcollections.com/",
+        "Published booth kit on GitHub Pages",
+        "https://nathanplatteruser.github.io/settleup-booth-kit/",
         "home",
         False,
     ),
@@ -96,35 +96,35 @@ CONVERT_LINKS = [
     (
         "Letter Risk Audit",
         "Consulting SKU · $2,500",
-        "https://settleupcollections.com/audit",
+        "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
         "audit",
         False,
     ),
     (
         "Free tools / Everything",
-        "Demos + tools hub",
-        "https://settleupcollections.com/everything",
+        "Demo assets hub",
+        "https://nathanplatteruser.github.io/settleup-booth-kit/demo-assets/",
         "everything",
         False,
     ),
     (
         "Risk scan lead magnet",
-        "Quick letter-risk scan",
-        "https://settleupcollections.com/risk-scan",
+        "Book a walkthrough",
+        "https://calendly.com/nathanplatter",
         "risk-scan",
         False,
     ),
     (
         "Conference QR hub",
         "Staff / booth bookmark",
-        "https://settleupcollections.com/qr",
+        "https://nathanplatteruser.github.io/settleup-booth-kit/",
         "qr-hub",
         False,
     ),
     (
         "Brainstorm hub",
         "Event landing",
-        "https://settleupcollections.com/brainstorm",
+        "https://nathanplatteruser.github.io/brainstorm-2026-radar/",
         "brainstorm",
         False,
     ),
@@ -138,7 +138,7 @@ CONVERT_LINKS = [
     (
         "Waitlist",
         "Optional · stay in the loop",
-        "https://settleupcollections.com/waitlist",
+        "mailto:nathanplatter@gmail.com",
         "waitlist",
         False,
     ),
@@ -789,7 +789,7 @@ def convert_close(c, page_no):
         "Pilot $499/mo  ·  SettleUp Firm $1,299/mo  ·  Letter Risk Audit $2,500",
         "",
         "calendly.com/nathanplatter",
-        "settleupcollections.com",
+        "nathanplatteruser.github.io/settleup-booth-kit/",
     ]):
         c.drawCentredString(PAGE_W / 2, PAGE_H - 2.2 * inch - i * 0.32 * inch, ln)
 

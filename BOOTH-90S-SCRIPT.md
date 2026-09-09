@@ -27,7 +27,7 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 
 ## Pre-flight (before anyone stops)
 
-1. Laptop awake on `/app?booth=1` — not Home, not live settleupcollections.com.
+1. Laptop awake on `/app?booth=1` - not Home, not a live marketing tab.
 2. `LTR-300-REFUSED` selected. **Remediation** tab open. Mismatch strip visible.
 3. Stats strip readable: 300 / 20 / 19 / 1.
 4. Sticky booth pill + QR standee both point at Calendly.
@@ -113,7 +113,7 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 
 ## Never-do list
 
-- Never open settleupcollections.com (or any mega-nav marketing tab) as the demo.
+- Never open a mega-nav marketing tab as the demo.
 - Never apologize for refuse — refuse *is* the demo.
 - Never say “AI that always fixes it.”
 - Never lead with FDCPA citations, ROI sliders, or Firm $1,299 as the aisle-only price.
