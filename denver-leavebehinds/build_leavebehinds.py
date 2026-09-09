@@ -89,7 +89,7 @@ CONVERT_LINKS = [
     (
         "Pricing",
         "Pilot · Firm · Audit",
-        "https://settleupcollections.com/pricing",
+        "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
         "pricing",
         False,
     ),
