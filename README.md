@@ -41,6 +41,7 @@ LinkedIn omitted; Calendly is the primary CTA.
 - Pilot **$499/mo**
 - Firm **$1,299/mo**
 - Letter Risk Audit **$2,500** (consulting SKU, not aisle-only)
+- Desk **$18,000** for 12 weeks (**$1,500** a week). High stay-on-the-desk price. Talk about Desk on Calendly. No Stripe on this SKU.
 
 ## Voice
 
