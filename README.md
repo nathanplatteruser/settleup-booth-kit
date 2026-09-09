@@ -53,9 +53,9 @@ See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 
 > Color, US Letter, 100% scale, single-sided, 80–110 lb cardstock — print the cardstock PDF; optional 2-up for cuts.
 
-## STACK B  -  Demo Assets + Polsia Destinations
+## STACK B  -  Demo Assets
 
-**Separate pack.** Operator / demo-navigation kit (GitHub refuse demo + live SettleUp / Polsia destinations). Not the primary aisle Calendly stack.
+**Separate pack.** Operator / demo-navigation kit (GitHub refuse demo). Not the primary aisle Calendly stack.
 
 | | |
 |---|---|
@@ -66,7 +66,7 @@ See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 | Clerk notes | `demo-assets/FEDEX-PRINT-NOTES.md` |
 | Walkthrough | `demo-assets/WALKTHROUGH.md` |
 
-Cover label on STACK B prints: **STACK B  -  Demo Assets + Polsia Destinations (not the primary aisle Calendly stack)**. Keep physical piles separate from this folder’s Calendly/radar PDFs above.
+Cover label on STACK B prints: **STACK B  -  Demo Assets (not the primary aisle Calendly stack)**. Keep physical piles separate from this folder’s Calendly/radar PDFs above.
 
 ## STACK DENVER LEAVE-BEHINDS  -  DEMO ONLY + CONVERT
 

@@ -1,10 +1,10 @@
-# FedEx / Kinko's print notes - STACK B Demo Assets + Polsia
+# FedEx / Kinko's print notes - STACK B Demo Assets
 
 **Hand this to the clerk (or read aloud).**
 
 ## One-liner for the counter
 
-> Color print, US Letter, actual size 100% (do not scale), single-sided, on 80-110 lb cardstock or glossy cover. Dark background is intentional. This is **STACK B - Demo Assets + Polsia Destinations**, NOT the primary aisle Calendly stack. Keep separate from any SettleUp-Brainstorm-QR-Cardstock.pdf printouts.
+> Color print, US Letter, actual size 100% (do not scale), single-sided, on 80-110 lb cardstock or glossy cover. Dark background is intentional. This is **STACK B - Demo Assets**, NOT the primary aisle Calendly stack. Keep separate from any SettleUp-Brainstorm-QR-Cardstock.pdf printouts.
 
 ## Files to print (this folder only)
 
@@ -14,14 +14,16 @@
 2. **`SettleUp-DemoAssets-QR-2up-cut.pdf`** (optional scissors run)
    - Cover + sheets with two cards each; cut on dashed midline
 
+Prefer the live screen if a printed card looks stale: https://nathanplatteruser.github.io/settleup-booth-kit/demo-assets/
+
 ## Do not mix stacks
 
 | Stack | File names | Purpose |
 |---|---|---|
 | **A (aisle)** | `SettleUp-Brainstorm-QR-Cardstock.pdf` · `SettleUp-QR-2up-cut.pdf` | Calendly primary + radar + aisle leave-behinds |
-| **B (this pack)** | `SettleUp-DemoAssets-QR-Cardstock.pdf` · `SettleUp-DemoAssets-QR-2up-cut.pdf` | GitHub demo assets + Polsia / live SettleUp destinations |
+| **B (this pack)** | `SettleUp-DemoAssets-QR-Cardstock.pdf` · `SettleUp-DemoAssets-QR-2up-cut.pdf` | GitHub demo assets |
 
-Label the physical STACK B pile: **“STACK B - Demo / Polsia (not Calendly aisle)”**.
+Label the physical STACK B pile: **“STACK B - Demo Assets (not Calendly aisle)”**.
 
 ## Specs
 
@@ -39,20 +41,19 @@ Label the physical STACK B pile: **“STACK B - Demo / Polsia (not Calendly aisl
 | Card lane | Qty |
 |---|---|
 | GitHub repo / DEMO-OUTPUT / Pages home | 8-12 each |
-| SettleUp home · Pricing · Audit · Landmine | 6-10 each |
-| Fail-closed · Brainstorm hub · Everything | 6-8 each |
-| QR hub · Audit handout · Methodology · Evidence T1 | 4-8 each |
+| Booth kit · Pricing · Radar | 6-10 each |
+| Calendly · Email Nathan | 6-10 each |
 
 ## After pickup
 
 - Keep STACK B in a separate sleeve or clip from Stack A Calendly cards.
 - Full-letter pages work as table standees; 2-up sheets are for pocket/handout cards after cutting.
 - Human-readable URL is printed under every QR - if a scan fails, they can type it.
-- Canonical live host: **settleupcollections.com** (.polsia.io is mirror).
+- Share published GitHub Pages URLs only. Next step is Calendly or mailto nathanplatter@gmail.com.
 
 ## Brand check
 
 - Wordmark: **SettleUp Collections** / **Platter Analytics**
-- Cover must say: **STACK B - Demo Assets + Polsia Destinations (not the primary aisle Calendly stack)**
+- Cover must say: **STACK B - Demo Assets (not the primary aisle Calendly stack)**
 - Event footer: Brainstorm 2026 Denver · STACK B
 - Do not reprint with any other vendor brand on the art.
