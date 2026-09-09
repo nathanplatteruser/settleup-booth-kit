@@ -32,6 +32,7 @@ Absolute (this workspace):
 4. **Pricing** → https://nathanplatteruser.github.io/settleup-booth-kit/#pricing
 5. **Whova** → https://whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/
 6. **This kit** → https://nathanplatteruser.github.io/settleup-booth-kit/
+7. **After the Lightning** → https://htmlpreview.github.io/?https://github.com/nathanplatteruser/nathanplatteruser.github.io/blob/main/after-the-lightning/index.html
 
 LinkedIn omitted; Calendly is the primary CTA.
 
