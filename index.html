@@ -148,6 +148,11 @@ a { color:var(--accent); }
 .price .roi { margin:10px 0 0; color:var(--text); font-size:.88rem; }
 .price ul { margin:8px 0 0; padding-left:1.1rem; color:var(--muted); font-size:.88rem; }
 .price li { margin:4px 0; }
+.close-banner {
+  background:#3a2e12; border:1px solid #a16207; border-radius:14px;
+  padding:14px 16px; margin:0 0 12px; color:var(--warn);
+  font-size:.92rem; font-weight:700; line-height:1.45;
+}
 .proof {
   background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px;
 }
@@ -177,7 +182,8 @@ footer {
 @media print {
   body { background:#fff; color:#000; padding:12px; }
   .nav, .actions, .script { display:none !important; }
-  .hero, .tile, .price, .proof { break-inside:avoid; border-color:#ccc; background:#fff; }
+  .hero, .tile, .price, .proof, .close-banner { break-inside:avoid; border-color:#ccc; background:#fff; }
+  .close-banner { color:#000; }
   a { color:#000; }
   .chip { display:none; }
 }
@@ -258,6 +264,7 @@ footer {
 <section class="section" id="pricing">
   <h2>Pricing story</h2>
   <p class="lead">ROI frame: gate capacity you can stand behind. Audit is the short, dense one-time. Desk is the stay-on-the-desk price. Consulting SKU is not aisle-only.</p>
+  <aside class="close-banner" role="status">Close window through Friday, Sept 18, 2026, 11:59pm CT. Code 2026BRAINSTORM. This is a dated banner, not a new price. After that clock, the standing prices remain.</aside>
   <div class="pricing">
     <div class="price featured">
       <div class="tag">Start here</div>
@@ -266,7 +273,6 @@ footer {
       <ul>
         <li>Letter-risk gate on dispute drafts</li>
         <li>Refuse-over-hallucinate workflow</li>
-        <li>Founding window close Oct 2, 2026 CT</li>
       </ul>
       <p style="margin-top:12px"><a class="btn" href="https://buy.stripe.com/dRm00j0GG53F8dVfO17Vm03" target="_blank" rel="noopener noreferrer">Start Pilot $499/mo</a></p>
       <p style="font-size:12px;color:var(--muted);margin-top:6px">Live Stripe checkout · aisle offer only</p>
