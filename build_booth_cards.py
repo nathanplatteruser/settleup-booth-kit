@@ -38,9 +38,9 @@ CARDS = [
         "why": [
             "Walk the refuse gate on your dispute stack - not a brochure tour.",
             "Proof already in: model $1,000 vs ledger $20,370.53 · refused.",
-            "Book 20 minutes. Prices after a real intro. Do not aisle-buy.",
+            "Book 20 minutes. Do not buy from the aisle.",
             "Nathan Platter · Principal, Analytics & AI | Revenue & GTM Intelligence.",
-            "Investment frame: capacity you can defend after send.",
+            "Capacity you can defend after send.",
         ],
     },
     {
@@ -55,7 +55,7 @@ CARDS = [
             "Run stats: 300 drafted / 20 blocked / 19 remediated / 1 hard refuse.",
             "Thesis: refuse over hallucinate. Wrong dollars don't leave.",
             "No login. Phone or laptop. Show the mismatch strip first.",
-            "Then book discovery. Do not aisle-buy Firm cold.",
+            "Then book discovery.",
         ],
     },
     {
@@ -68,24 +68,24 @@ CARDS = [
         "why": [
             "Fit + priority radar for aisle targeting between demos.",
             "Phone-first. Use after the refuse wow - not instead of it.",
-            "Book 20 minutes for Pilot / Firm / Audit / Desk.",
-            "Prices after a real intro. No public list prices on this card.",
+            "Book 20 minutes. calendly.com/nathanplatter.",
             "Platter Analytics / SettleUp Collections.",
+            "People board, then book. Do not lead with the radar.",
         ],
     },
     {
-        "tag": "PRICING",
-        "title": "Pilot · Firm · Letter Risk Audit · Desk",
-        "kicker": "PRICING AFTER INTRO",
-        "url": "nathanplatteruser.github.io/settleup-booth-kit/#pricing",
-        "qr": "pricing.png",
-        "scan": "Scan to book a price conversation",
+        "tag": "BOOK",
+        "title": "Book intro · 20 minutes",
+        "kicker": "BOOK INTRO",
+        "url": "calendly.com/nathanplatter",
+        "qr": "book-calendly.png",
+        "scan": "Scan to book 20 minutes",
         "why": [
-            "Book 20 minutes. Prices after a real intro.",
-            "Named paths only. No aisle swipe prices. No Stripe on this card.",
-            "Audit is the short, dense one-time. Desk is stay-on-the-desk.",
-            "ROI frame: defendable capacity, not a cost-center AI toy.",
-            "Scan for the booth kit intro, then book Calendly.",
+            "Book 20 minutes. calendly.com/nathanplatter.",
+            "No aisle price talk. No Stripe on this card.",
+            "Walk the refuse on your stack next week.",
+            "Printed QRs that said Pricing now book Calendly.",
+            "Nathan Platter · Principal, Analytics & AI.",
         ],
     },
     {
@@ -195,10 +195,10 @@ def brand_header(c, tag):
         1.8 * inch,
         0.36 * inch,
         r=8,
-        fill=HexColor("#3a2e12") if tag in ("PRIMARY", "PRICING") else PANEL,
-        stroke=HERO if tag in ("PRIMARY", "PRICING") else BORDER,
+        fill=HexColor("#3a2e12") if tag in ("PRIMARY", "BOOK") else PANEL,
+        stroke=HERO if tag in ("PRIMARY", "BOOK") else BORDER,
     )
-    c.setFillColor(HERO if tag in ("PRIMARY", "PRICING") else ACCENT)
+    c.setFillColor(HERO if tag in ("PRIMARY", "BOOK") else ACCENT)
     c.setFont("Helvetica-Bold", 9)
     c.drawCentredString(PAGE_W - 1.45 * inch, PAGE_H - 0.73 * inch, tag)
 
@@ -225,10 +225,10 @@ def cover_page(c):
         "Also print SettleUp-QR-2up-cut.pdf for scissors cut cards.",
         "Cut marks optional. Center QR is the target; keep URL readable.",
         "Qty suggestion: 25-40 of Book/Calendly as primary aisle;",
-        "  10-15 each of demo, radar, pricing, letter-risk, facilitator.",
+        "  10-15 each of demo, radar, book intro, letter-risk, facilitator.",
         "Brand: Platter Analytics / SettleUp Collections",
-        "No public list prices on these cards. Book 20 minutes.",
-        "Prices after a real intro. Refuse-fixture $1,000 vs $20,370.53 stays.",
+        "Book 20 minutes. calendly.com/nathanplatter.",
+        "Refuse-fixture $1,000 vs $20,370.53 stays. No aisle price talk.",
     ]
     c.setFillColor(TEXT)
     c.setFont("Helvetica", 11)
@@ -311,7 +311,7 @@ def two_up_cover(c):
         "Each page = 2 cards. Cut on the dashed midline.",
         "Same six cards as the full-letter stack (no cover in cut count).",
         "Tell clerk: color, cardstock, do not scale, cut on dashes optional.",
-        "No public list prices. Book 20 minutes. Prices after a real intro.",
+        "Book 20 minutes. calendly.com/nathanplatter. No aisle price talk.",
     ]:
         c.drawString(0.55 * inch, y, ln)
         y -= 0.28 * inch
@@ -322,7 +322,7 @@ def two_up_cover(c):
 def two_up_half(c, card, band_bottom, band_top):
     margin = 0.45 * inch
     tag_y = band_top - 0.42 * inch
-    c.setFillColor(HERO if card["tag"] in ("PRIMARY", "PRICING") else ACCENT)
+    c.setFillColor(HERO if card["tag"] in ("PRIMARY", "BOOK") else ACCENT)
     c.setFont("Helvetica-Bold", 8)
     c.drawString(margin, tag_y, f"SettleUp Collections  ·  {card['tag']}")
     c.setFillColor(YES)
@@ -378,12 +378,12 @@ def build_2up(path: Path):
     print("wrote", path)
 
 
-def stack_b_pricing_page(path: Path):
-    """One-page STACK B pricing card: book first, no list prices."""
+def stack_b_book_page(path: Path, page_label: str = "6/15"):
+    """One-page STACK B book-intro card: Calendly only."""
     import qrcode
 
     qr_path = ROOT / "demo-assets" / "qrs" / "pricing-pages.png"
-    url = "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing"
+    url = "https://calendly.com/nathanplatter"
     qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=10, border=2)
     qr.add_data(url)
     qr.make(fit=True)
@@ -405,10 +405,10 @@ def stack_b_pricing_page(path: Path):
 
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 22)
-    c.drawString(0.55 * inch, PAGE_H - 1.5 * inch, "Pricing")
+    c.drawString(0.55 * inch, PAGE_H - 1.5 * inch, "Book intro")
     c.setFillColor(ACCENT)
     c.setFont("Helvetica-Bold", 10)
-    c.drawString(0.55 * inch, PAGE_H - 1.78 * inch, "BOOK 20 MINUTES  ·  PRICES AFTER A REAL INTRO")
+    c.drawString(0.55 * inch, PAGE_H - 1.78 * inch, "BOOK 20 MINUTES  ·  CALENDLY")
 
     rounded_rect(c, 0.55 * inch, PAGE_H - 2.28 * inch, PAGE_W - 1.1 * inch, 0.32 * inch, r=6, fill=HexColor("#3a2e12"), stroke=HERO)
     c.setFillColor(WARN)
@@ -422,10 +422,10 @@ def stack_b_pricing_page(path: Path):
     c.drawImage(str(qr_path), qx, qy, width=qr_size, height=qr_size, mask="auto")
     c.setFillColor(ACCENT)
     c.setFont("Helvetica", 9)
-    c.drawCentredString(PAGE_W / 2, qy - 0.32 * inch, "nathanplatteruser.github.io/settleup-booth-kit/#pricing")
+    c.drawCentredString(PAGE_W / 2, qy - 0.32 * inch, "calendly.com/nathanplatter")
     c.setFillColor(MUTED)
     c.setFont("Helvetica-Oblique", 9)
-    c.drawCentredString(PAGE_W / 2, qy - 0.52 * inch, "Scan to open · human-readable URL above")
+    c.drawCentredString(PAGE_W / 2, qy - 0.52 * inch, "Scan to book · human-readable URL above")
 
     rounded_rect(c, 0.55 * inch, 1.05 * inch, PAGE_W - 1.1 * inch, 1.7 * inch, r=10, fill=PANEL, stroke=BORDER)
     c.setFillColor(HERO)
@@ -435,9 +435,9 @@ def stack_b_pricing_page(path: Path):
     c.setFont("Helvetica", 10)
     yy = 2.18 * inch
     for ln in [
-        "Book 20 minutes. Prices after a real intro.",
-        "No public list prices on this card. No Stripe.",
-        "Pilot / Firm / Audit / Desk are named paths, not aisle swipe prices.",
+        "Book 20 minutes. calendly.com/nathanplatter.",
+        "No aisle price talk. No Stripe.",
+        "Walk the refuse on your stack next week.",
         "After refuse story, not before.",
     ]:
         c.drawString(0.75 * inch, yy, ln)
@@ -445,12 +445,12 @@ def stack_b_pricing_page(path: Path):
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8)
     c.drawString(0.55 * inch, 0.38 * inch, "Brainstorm 2026 Denver · Platter Analytics · STACK B · Demo Assets")
-    c.drawRightString(PAGE_W - 0.55 * inch, 0.38 * inch, "6/15")
+    c.drawRightString(PAGE_W - 0.55 * inch, 0.38 * inch, page_label)
     c.save()
 
 
 def stack_b_2up_pricing_sheet(path: Path, original_2up: Path):
-    """Rebuild the 2-up sheet that holds the pricing half (page 4)."""
+    """Rebuild the 2-up sheet that holds the book-intro half (page 4)."""
     # Keep the Polsia-home half copy (no list prices) and rewrite the pricing half.
     import qrcode
 
@@ -475,11 +475,11 @@ def stack_b_2up_pricing_sheet(path: Path, original_2up: Path):
             "qr": None,
         },
         {
-            "lane": "PRICING INTRO",
-            "title": "Pricing",
-            "sub": "Book 20 minutes. Prices after a real intro.",
-            "url": "nathanplatteruser.github.io/settleup-booth-kit/#pricing",
-            "why": "No public list prices. After refuse story, not before.",
+            "lane": "BOOK INTRO",
+            "title": "Book intro",
+            "sub": "Book 20 minutes. calendly.com/nathanplatter.",
+            "url": "calendly.com/nathanplatter",
+            "why": "No aisle price talk. After refuse story, not before.",
             "n": "6/15",
             "qr": str(price_qr),
         },
@@ -553,13 +553,102 @@ def replace_pdf_page(src: Path, dest: Path, page_index: int, replacement: Path):
     print("patched", dest, "page", page_index + 1)
 
 
+def stack_b_2up_audit_sheet(path: Path):
+    """Rebuild the 2-up sheet that held Letter Risk Audit + landmine."""
+    import qrcode
+
+    price_qr = ROOT / "demo-assets" / "qrs" / "pricing-pages.png"
+    landmine_tmp = ROOT / "demo-assets" / "qrs" / "_landmine-tmp.png"
+    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=8, border=2)
+    qr.add_data("https://settleupcollections.com/demo/landmine")
+    qr.make(fit=True)
+    qr.make_image(fill_color="black", back_color="white").save(landmine_tmp)
+
+    c = canvas.Canvas(str(path), pagesize=letter)
+    draw_bg(c)
+    half_h = PAGE_H / 2
+    halves = [
+        {
+            "lane": "BOOK INTRO",
+            "title": "Book intro",
+            "sub": "Book 20 minutes. calendly.com/nathanplatter.",
+            "url": "calendly.com/nathanplatter",
+            "why": "No aisle price talk. After refuse story, not before.",
+            "n": "7/15",
+            "qr": str(price_qr),
+        },
+        {
+            "lane": "POLSIA / LIVE",
+            "title": "Landmine demo",
+            "sub": "Acceptance landmine walkthrough",
+            "url": "settleupcollections.com/demo/landmine",
+            "why": "Interactive landmine acceptance demo.",
+            "n": "8/15",
+            "qr": str(landmine_tmp),
+        },
+    ]
+    for idx, card in enumerate(halves):
+        band_bottom = half_h if idx == 0 else 0
+        band_top = PAGE_H if idx == 0 else half_h
+        margin = 0.45 * inch
+        tag_y = band_top - 0.42 * inch
+        c.setFillColor(HERO)
+        c.setFont("Helvetica-Bold", 8)
+        c.drawString(margin, tag_y, f"SettleUp Collections  ·  {card['lane']}")
+        c.setFillColor(YES)
+        c.setFont("Helvetica-Bold", 7)
+        c.drawString(margin, tag_y - 0.16 * inch, "REFUSE OVER HALLUCINATE · STACK B")
+        c.setFillColor(TEXT)
+        c.setFont("Helvetica-Bold", 14)
+        c.drawString(margin, tag_y - 0.42 * inch, card["title"])
+        c.setFillColor(MUTED)
+        c.setFont("Helvetica", 9)
+        c.drawString(margin, tag_y - 0.62 * inch, card["sub"])
+        c.setFillColor(ACCENT)
+        c.setFont("Helvetica", 8)
+        yy = tag_y - 0.84 * inch
+        for ul in wrap_text(c, card["url"], "Helvetica", 8, PAGE_W - 3.6 * inch):
+            c.drawString(margin, yy, ul)
+            yy -= 0.14 * inch
+        c.setFillColor(MUTED)
+        c.setFont("Helvetica", 9)
+        c.drawString(margin, yy - 0.06 * inch, card["why"])
+        c.setFont("Helvetica-Bold", 9)
+        c.setFillColor(ACCENT)
+        c.drawString(margin, band_bottom + 0.42 * inch, card["n"])
+        qr_size = 1.7 * inch
+        qx = PAGE_W - margin - qr_size - 0.08 * inch
+        qy = band_bottom + 0.55 * inch
+        c.setFillColor(white)
+        c.roundRect(qx - 6, qy - 6, qr_size + 12, qr_size + 12, 6, fill=1, stroke=0)
+        c.drawImage(card["qr"], qx, qy, width=qr_size, height=qr_size, mask="auto")
+
+    c.setStrokeColor(MUTED)
+    c.setDash(3, 3)
+    c.line(0.4 * inch, half_h, PAGE_W - 0.4 * inch, half_h)
+    c.setDash()
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 7)
+    c.drawCentredString(PAGE_W / 2, half_h + 3, "cut")
+    c.setFont("Helvetica", 8)
+    c.drawString(0.55 * inch, 0.38 * inch, "Brainstorm 2026 Denver · Platter Analytics · STACK B · Demo Assets")
+    c.drawRightString(PAGE_W - 0.55 * inch, 0.38 * inch, "Sheet 4/8")
+    c.save()
+    if landmine_tmp.exists():
+        landmine_tmp.unlink()
+
+
 def patch_stack_b():
     tmp_dir = ROOT / "demo-assets" / "_tmp_price_lock"
     tmp_dir.mkdir(exist_ok=True)
     page7 = tmp_dir / "stackb-page7.pdf"
+    page8 = tmp_dir / "stackb-page8.pdf"
     sheet3 = tmp_dir / "stackb-2up-sheet3.pdf"
-    stack_b_pricing_page(page7)
+    sheet4 = tmp_dir / "stackb-2up-sheet4.pdf"
+    stack_b_book_page(page7, "6/15")
+    stack_b_book_page(page8, "7/15")
     stack_b_2up_pricing_sheet(sheet3, ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-2up-cut.pdf")
+    stack_b_2up_audit_sheet(sheet4)
     replace_pdf_page(
         ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-Cardstock.pdf",
         ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-Cardstock.pdf",
@@ -567,10 +656,22 @@ def patch_stack_b():
         page7,
     )
     replace_pdf_page(
+        ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-Cardstock.pdf",
+        ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-Cardstock.pdf",
+        7,
+        page8,
+    )
+    replace_pdf_page(
         ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-2up-cut.pdf",
         ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-2up-cut.pdf",
         3,
         sheet3,
+    )
+    replace_pdf_page(
+        ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-2up-cut.pdf",
+        ROOT / "demo-assets" / "SettleUp-DemoAssets-QR-2up-cut.pdf",
+        4,
+        sheet4,
     )
     for p in tmp_dir.iterdir():
         p.unlink()

@@ -29,20 +29,20 @@ Absolute (this workspace):
 1. **Book discovery** → https://calendly.com/nathanplatter (PRIMARY)
 2. **Letter demo** → https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html
 3. **Radar** → https://nathanplatteruser.github.io/brainstorm-2026-radar/
-4. **Pricing** → https://nathanplatteruser.github.io/settleup-booth-kit/#pricing
+4. **Book intro** → https://calendly.com/nathanplatter
 5. **Whova** → https://whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/
 6. **This kit** → https://nathanplatteruser.github.io/settleup-booth-kit/
 7. **After the Lightning** → https://htmlpreview.github.io/?https://github.com/nathanplatteruser/nathanplatteruser.github.io/blob/main/after-the-lightning/index.html
 
 LinkedIn omitted; Calendly is the primary CTA.
 
-## Pricing
+## Book intro
 
-No public list prices on this kit. Book 20 minutes: https://calendly.com/nathanplatter. Prices after a real intro. Do not aisle-buy. No Stripe checkout on these pages.
+Book 20 minutes: https://calendly.com/nathanplatter. No aisle price talk. No Stripe checkout on these pages.
 
 ## Voice
 
-No em dashes. Refuse over hallucinate. Investment/ROI frame, not cost-center. Never invent product URLs.
+No em dashes. Refuse over hallucinate. Never invent product URLs. Never invent prices.
 
 ## Print
 

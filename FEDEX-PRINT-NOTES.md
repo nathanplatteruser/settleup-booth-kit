@@ -32,7 +32,7 @@
 | Book 20-min discovery (Calendly) — PRIMARY | 25–40 |
 | Refused-letter demo | 10–15 |
 | Conference radar | 10–15 |
-| Pricing leave-behind | 10–15 |
+| Book intro (Calendly) | 10–15 |
 | “Who owns letter risk?” | 10–15 |
 | Facilitator / session | 8–12 |
 
@@ -45,5 +45,5 @@
 ## Brand check
 
 - Wordmark: **SettleUp Collections** / **Platter Analytics**
-- Event footer: Brainstorm 2026 Denver · Book 20 min · calendly.com/nathanplatter · Prices after a real intro
+- Event footer: Brainstorm 2026 Denver · Book 20 min · calendly.com/nathanplatter
 - Do not reprint with any other vendor brand on the art.

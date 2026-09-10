@@ -15,7 +15,7 @@ This is Mike's party. You are an honored guest. The official help desk in the re
 
 - Help first. Calendly after they ask.
 - Do not pitch during someone else's session.
-- Do not open pricing on a sandbox projector or at the help desk unless they asked after seeing the refuse.
+- Do not talk what Nathan charges on a sandbox projector or at the help desk. Book Calendly.
 - Thursday AM with Ralph, Olga, Aryeh is the hands-on product. Teach. Do not close.
 - Company security first. Personal laptop. Ollama for that lab. Anything LLM is Rob and Dan.
 - Clark Hill sponsors the sandbox. Thank them. Do not compete with Doc or Rob's CRM.
@@ -103,7 +103,7 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 | “Why would I pay if the repo’s free?” | “Free is the proof on synthetic data. Hard part is your templates, state overlays, your gate rules, production accountability.” |
 | “Does it always remediate?” | “No. Nineteen of twenty blocked fixed themselves. One refused. Refuse is the brand.” |
 | “What about liability / fines?” | “I won’t quote your exposure. Paper trail and exam survival — that’s counsel. I’m showing the stop.” *(hand to Aryeh if present)* |
-| “Show me pricing.” | After the refuse only, and only if they asked: “Book twenty minutes. Prices after a real intro. Don’t buy from the aisle.” Never on a sandbox screen. Never quote a list price. |
+| “Show me pricing.” / “How much?” | “Book twenty minutes. calendly.com/nathanplatter.” Never quote what Nathan charges. Never on a sandbox screen. |
 | “Can I see the live website?” | “Not the demo. Console is the product. Live marketing site is mega-nav — we’ll skip it.” |
 | They grab the trackpad | “Stay on Remediation — mismatch first. Letter prose is homework after the wow.” |
 | Skeptic / arms crossed | “Your letters already pass compliance. Want to see one that was correct-sounding and still would have wrecked recovery?” → back to opening line. |
@@ -116,10 +116,10 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 - Never open a mega-nav marketing tab as the demo.
 - Never apologize for refuse — refuse *is* the demo.
 - Never say “AI that always fixes it.”
-- Never lead with FDCPA citations, ROI sliders, or a Firm list price from the aisle.
+- Never lead with FDCPA citations, ROI sliders, or what Nathan charges.
 - Never invent a public list price or say a dollar from the aisle (refuse-fixture $1,000 vs $20,370.53 is the only money talk).
 - Never form-gate before they see the refuse.
-- Never pitch consulting before the refuse (consulting is the close).
+- Never pitch a close before the refuse. Close is book Calendly.
 - Never claim measured client ROI or dollar exposure / fines.
 - Never present the old “12 min working average.” Cite Olga’s locked FTE only: intake 3–5 · review ~4 · research 20–30 · draft 5–7 · compliance 3–6 · close 3–5 (~38–57 demo baseline upper (~57)). Not Nathan’s shop.
 - Never invent stats — only **300 / 20 / 19 / 1** and **$1,000 vs $20,370.53**.
