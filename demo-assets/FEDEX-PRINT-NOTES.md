@@ -41,7 +41,7 @@ Label the physical STACK B pile: **“STACK B - Demo Assets (not Calendly aisle)
 | Card lane | Qty |
 |---|---|
 | GitHub repo / DEMO-OUTPUT / Pages home | 8-12 each |
-| Booth kit · Pricing · Radar | 6-10 each |
+| Booth kit · Book intro · Radar | 6-10 each |
 | Calendly · Email Nathan | 6-10 each |
 
 ## After pickup

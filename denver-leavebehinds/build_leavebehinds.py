@@ -87,17 +87,17 @@ CONVERT_LINKS = [
         False,
     ),
     (
-        "Pricing",
-        "Pilot · Firm · Audit",
-        "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
-        "pricing",
+        "Book intro",
+        "20-min walkthrough · Calendly",
+        "https://calendly.com/nathanplatter",
+        "book-calendly",
         False,
     ),
     (
-        "Letter Risk Audit",
-        "Consulting SKU · $2,500",
-        "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
-        "audit",
+        "Book Nathan",
+        "Same next step. Book 20 minutes.",
+        "https://calendly.com/nathanplatter",
+        "book-calendly",
         False,
     ),
     (
@@ -499,7 +499,7 @@ def demo_proof_back(c: canvas.Canvas, page_no: int):
 
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 9)
-    c.drawCentredString(PAGE_W / 2, 1.0 * inch, "This pack is DEMO ONLY. For booking / pricing use the CONVERT leave-behind.")
+    c.drawCentredString(PAGE_W / 2, 1.0 * inch, "This pack is DEMO ONLY. For booking use the CONVERT leave-behind.")
     draw_footer(c, "STACK DEMO", page_no)
     c.showPage()
 
@@ -663,13 +663,13 @@ def convert_copy(c: canvas.Canvas):
     draw_bg(c)
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 18)
-    c.drawString(0.55 * inch, PAGE_H - 0.8 * inch, "Why the letter-risk gate is an investment")
+    c.drawString(0.55 * inch, PAGE_H - 0.8 * inch, "Why the letter-risk gate exists")
 
     paras = [
         "Wrong dollars leaving your building is not a tooling preference. It is liability. The Dispute Queue demo showed a model that wrote $1,000 against a ledger of $20,370.53. The system checked, tried one remediation, and refused out loud.",
         "Capacity without a gate is exposure. Olga’s locked FTE (~38-57; demo uses upper ~57 for human lunch/meetings) is the ops clock; examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
-        "Pilot, Firm, and Letter Risk Audit are framed as investment, not a cost center. You buy a path to more volume with the same team, without shipping hallucinated balances. Proof is free to inspect. Production is your system of record, your rules, and your accountability.",
-        "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. We will map Pilot or Firm or a scoped Letter Risk Audit to your shop.",
+        "Proof is free to inspect. Production is your system of record, your rules, and your accountability. The gate keeps unsupported facts from leaving the building.",
+        "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. calendly.com/nathanplatter",
     ]
     y = PAGE_H - 1.2 * inch
     for p in paras:
@@ -683,14 +683,13 @@ def convert_copy(c: canvas.Canvas):
             yy -= 0.17 * inch
         y -= 1.55 * inch
 
-    # pricing strip
     rounded_rect(c, 0.55 * inch, 0.7 * inch, PAGE_W - 1.1 * inch, 0.85 * inch, r=10, fill=HexColor("#3a2e12"), stroke=HERO)
     c.setFillColor(HERO)
     c.setFont("Helvetica-Bold", 10)
-    c.drawString(0.75 * inch, 1.25 * inch, "PRICING (LOCKED)")
+    c.drawString(0.75 * inch, 1.25 * inch, "BOOK INTRO")
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 11)
-    c.drawString(0.75 * inch, 0.95 * inch, "Pilot $499/mo   ·   SettleUp Firm $1,299/mo   ·   Letter Risk Audit $2,500")
+    c.drawString(0.75 * inch, 0.95 * inch, "Book 20 minutes: calendly.com/nathanplatter")
     draw_footer(c, "STACK CONVERT", 2)
     c.showPage()
 
@@ -785,8 +784,6 @@ def convert_close(c, page_no):
     for i, ln in enumerate([
         "Book a 20-minute walkthrough with Nathan.",
         "Or find him onsite at Brainstorm 2026 Denver.",
-        "",
-        "Pilot $499/mo  ·  SettleUp Firm $1,299/mo  ·  Letter Risk Audit $2,500",
         "",
         "calendly.com/nathanplatter",
         "nathanplatteruser.github.io/settleup-booth-kit/",

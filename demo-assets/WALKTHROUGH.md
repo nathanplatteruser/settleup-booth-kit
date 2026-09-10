@@ -15,8 +15,8 @@ It is **not** the primary aisle Calendly / radar leave-behind stack. That remain
    Open **DEMO-OUTPUT** (`…/dispute-agent-demo/DEMO-OUTPUT.html`).  
    **Do not** open a marketing mega-nav as the first flash.
 
-2. **When they ask “where’s the live app / audit / landmine / pricing?”**  
-   Switch to **this pack (STACK B)**. Scan or open the matching GitHub Pages card. Pricing lives on the booth kit. Book or email is the close.
+2. **When they ask “where’s the live app / audit / landmine?”**  
+   Switch to **this pack (STACK B)**. Scan or open the matching GitHub Pages card. If they ask how much, book 20 minutes on Calendly. Book or email is the close.
 
 3. **When they want to book discovery**  
    Use **Stack A** Calendly card (`calendly.com/nathanplatter`), or the Calendly card in this pack.
@@ -36,7 +36,7 @@ It is **not** the primary aisle Calendly / radar leave-behind stack. That remain
 | # | Card | When |
 |---|---|---|
 | 4 | Booth kit home | “Where’s the kit / aisle page?” |
-| 5 | Pricing | After refuse story; Pilot / Firm / Audit / Desk |
+| 5 | Book intro | After refuse story; book 20 min on Calendly. |
 | 6 | Conference radar | People board / founding window |
 | 7 | Book discovery | They want time on the calendar |
 | 8 | Email Nathan | They prefer mail over a booking link |

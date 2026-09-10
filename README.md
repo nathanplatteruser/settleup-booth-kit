@@ -1,4 +1,4 @@
-# SettleUp Booth Kit — Brainstorm 2026 Denver
+# SettleUp Booth Kit - Brainstorm 2026 Denver
 
 Screen-flash aisle page + FedEx cardstock QR stack for SettleUp Collections (Platter Analytics).
 
@@ -29,29 +29,26 @@ Absolute (this workspace):
 1. **Book discovery** → https://calendly.com/nathanplatter (PRIMARY)
 2. **Letter demo** → https://nathanplatteruser.github.io/dispute-agent-demo/DEMO-OUTPUT.html
 3. **Radar** → https://nathanplatteruser.github.io/brainstorm-2026-radar/
-4. **Pricing** → https://nathanplatteruser.github.io/settleup-booth-kit/#pricing
+4. **Book intro** → https://calendly.com/nathanplatter
 5. **Whova** → https://whova.com/portal/webapp/wHydHQ8eVyTTnDjH7AKW/
 6. **This kit** → https://nathanplatteruser.github.io/settleup-booth-kit/
 7. **After the Lightning** → https://htmlpreview.github.io/?https://github.com/nathanplatteruser/nathanplatteruser.github.io/blob/main/after-the-lightning/index.html
 
 LinkedIn omitted; Calendly is the primary CTA.
 
-## Pricing (locked)
+## Book intro
 
-- Pilot **$499/mo**
-- Firm **$1,299/mo**
-- Letter Risk Audit **$2,500** (consulting SKU, not aisle-only)
-- Desk **$18,000** for 12 weeks (**$1,500** a week). High stay-on-the-desk price. Talk about Desk on Calendly. No Stripe on this SKU.
+Book 20 minutes: https://calendly.com/nathanplatter. No aisle price talk. No Stripe checkout on these pages.
 
 ## Voice
 
-No em dashes. Refuse over hallucinate. Investment/ROI frame, not cost-center. Never invent product URLs.
+No em dashes. Refuse over hallucinate. Never invent product URLs. Never invent prices.
 
 ## Print
 
 See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 
-> Color, US Letter, 100% scale, single-sided, 80–110 lb cardstock — print the cardstock PDF; optional 2-up for cuts.
+> Color, US Letter, 100% scale, single-sided, 80-110 lb cardstock. Print the cardstock PDF; optional 2-up for cuts.
 
 ## STACK B  -  Demo Assets
 

@@ -10,9 +10,9 @@
 
 1. **`SettleUp-Collections-Conversion-Leavebehind.pdf`** (primary CONVERT stack)
    - Cover with remediation recall screenshot
-   - Investment / ROI copy + locked pricing
+   - Book 20 minutes / Calendly. No list prices.
    - Same ops/remediation visuals for backpack recall
-   - QR cards: Calendly (PRIMARY) · SettleUp home · pricing · audit · everything · risk-scan · qr · brainstorm · demo recall · waitlist
+   - QR cards: Calendly (PRIMARY) · SettleUp home · Book intro · Book Nathan · everything · risk-scan · qr · brainstorm · demo recall · waitlist
    - Close page with Book Nathan QR
 2. **`SettleUp-Collections-Conversion-Leavebehind-2up.pdf`** (optional scissors run)
 
@@ -44,11 +44,9 @@ Tell the clerk clearly: **this is the CONVERSION stack.**
 | Book Nathan 2-up cards | Extra cuts of the Calendly half-pages |
 | Other CONVERT 2-up sheets | 10–20 |
 
-## Pricing printed on art (locked)
+## Book intro printed on art
 
-- Pilot **$499/mo**
-- Firm **$1,299/mo**
-- Letter Risk Audit **$2,500**
+Book 20 minutes: https://calendly.com/nathanplatter. No aisle price talk.
 
 ## Brand check
 
