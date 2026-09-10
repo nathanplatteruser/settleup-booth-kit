@@ -103,7 +103,7 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 | “Why would I pay if the repo’s free?” | “Free is the proof on synthetic data. Hard part is your templates, state overlays, your gate rules, production accountability.” |
 | “Does it always remediate?” | “No. Nineteen of twenty blocked fixed themselves. One refused. Refuse is the brand.” |
 | “What about liability / fines?” | “I won’t quote your exposure. Paper trail and exam survival — that’s counsel. I’m showing the stop.” *(hand to Aryeh if present)* |
-| “Show me pricing.” | After the refuse only, and only if they asked: “Pilot four ninety-nine a month. Firm twelve ninety-nine. Book twenty minutes — don’t buy from the aisle.” Never on a sandbox screen. |
+| “Show me pricing.” | After the refuse only, and only if they asked: “Book twenty minutes. Prices after a real intro. Don’t buy from the aisle.” Never on a sandbox screen. Never quote a list price. |
 | “Can I see the live website?” | “Not the demo. Console is the product. Live marketing site is mega-nav — we’ll skip it.” |
 | They grab the trackpad | “Stay on Remediation — mismatch first. Letter prose is homework after the wow.” |
 | Skeptic / arms crossed | “Your letters already pass compliance. Want to see one that was correct-sounding and still would have wrecked recovery?” → back to opening line. |
@@ -116,8 +116,8 @@ Aisle energy (this script) is for a stop at a screen you already have up. It is 
 - Never open a mega-nav marketing tab as the demo.
 - Never apologize for refuse — refuse *is* the demo.
 - Never say “AI that always fixes it.”
-- Never lead with FDCPA citations, ROI sliders, or Firm $1,299 as the aisle-only price.
-- Never say **$1,499** as the price.
+- Never lead with FDCPA citations, ROI sliders, or a Firm list price from the aisle.
+- Never invent a public list price or say a dollar from the aisle (refuse-fixture $1,000 vs $20,370.53 is the only money talk).
 - Never form-gate before they see the refuse.
 - Never pitch consulting before the refuse (consulting is the close).
 - Never claim measured client ROI or dollar exposure / fines.

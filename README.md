@@ -1,4 +1,4 @@
-# SettleUp Booth Kit — Brainstorm 2026 Denver
+# SettleUp Booth Kit - Brainstorm 2026 Denver
 
 Screen-flash aisle page + FedEx cardstock QR stack for SettleUp Collections (Platter Analytics).
 
@@ -36,12 +36,9 @@ Absolute (this workspace):
 
 LinkedIn omitted; Calendly is the primary CTA.
 
-## Pricing (locked)
+## Pricing
 
-- Pilot **$499/mo**
-- Firm **$1,299/mo**
-- Letter Risk Audit **$2,500** (consulting SKU, not aisle-only)
-- Desk **$18,000** for 12 weeks (**$1,500** a week). High stay-on-the-desk price. Talk about Desk on Calendly. No Stripe on this SKU.
+No public list prices on this kit. Book 20 minutes: https://calendly.com/nathanplatter. Prices after a real intro. Do not aisle-buy. No Stripe checkout on these pages.
 
 ## Voice
 
@@ -51,7 +48,7 @@ No em dashes. Refuse over hallucinate. Investment/ROI frame, not cost-center. Ne
 
 See `FEDEX-PRINT-NOTES.md`. One-liner for Nathan at the counter:
 
-> Color, US Letter, 100% scale, single-sided, 80–110 lb cardstock — print the cardstock PDF; optional 2-up for cuts.
+> Color, US Letter, 100% scale, single-sided, 80-110 lb cardstock. Print the cardstock PDF; optional 2-up for cuts.
 
 ## STACK B  -  Demo Assets
 

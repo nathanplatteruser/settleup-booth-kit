@@ -45,5 +45,5 @@
 ## Brand check
 
 - Wordmark: **SettleUp Collections** / **Platter Analytics**
-- Event footer: Brainstorm 2026 Denver · Pilot $499
+- Event footer: Brainstorm 2026 Denver · Book 20 min · calendly.com/nathanplatter · Prices after a real intro
 - Do not reprint with any other vendor brand on the art.

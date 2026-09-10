@@ -14,7 +14,7 @@ Exclusively **SettleUp Collections** for Brainstorm 2026 Denver (never Marketpla
 | Cover | STACK DEMO — Dispute Queue (Nathan · Olga · Ralph) | STACK CONVERT — SettleUp Collections · after the demo |
 | Screenshots | Remediation + ops console (large) | Same remediation/console (recall) |
 | QRs | Letter demo · GitHub repo · Pages home · walkthrough · demo screen | Calendly (PRIMARY) · SettleUp home · pricing · audit · everything · risk-scan · qr · brainstorm · demo recall · waitlist |
-| Sales CTAs | **None** (no Calendly, pricing, site marketing, waitlist, book-me) | **Yes** — book / price / product |
+| Sales CTAs | **None** (no Calendly, pricing, site marketing, waitlist, book-me) | **Yes** - book 20 min / intro / product. No list prices. |
 | FedEx notes | `FEDEX-DEMO-ONLY.md` | `FEDEX-CONVERT.md` |
 | Full PDF | `SettleUp-DisputeQueue-Demo-ONLY.pdf` | `SettleUp-Collections-Conversion-Leavebehind.pdf` |
 | 2-up PDF | `SettleUp-DisputeQueue-Demo-ONLY-2up.pdf` | `SettleUp-Collections-Conversion-Leavebehind-2up.pdf` |

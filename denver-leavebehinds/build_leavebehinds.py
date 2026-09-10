@@ -88,14 +88,14 @@ CONVERT_LINKS = [
     ),
     (
         "Pricing",
-        "Pilot · Firm · Audit",
+        "Book 20 minutes. Prices after a real intro.",
         "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
         "pricing",
         False,
     ),
     (
         "Letter Risk Audit",
-        "Consulting SKU · $2,500",
+        "Consulting SKU. Book 20 minutes. Prices after a real intro.",
         "https://nathanplatteruser.github.io/settleup-booth-kit/#pricing",
         "audit",
         False,
@@ -669,7 +669,7 @@ def convert_copy(c: canvas.Canvas):
         "Wrong dollars leaving your building is not a tooling preference. It is liability. The Dispute Queue demo showed a model that wrote $1,000 against a ledger of $20,370.53. The system checked, tried one remediation, and refused out loud.",
         "Capacity without a gate is exposure. Olga’s locked FTE (~38-57; demo uses upper ~57 for human lunch/meetings) is the ops clock; examiners already know what a paper trail must survive. A refuse-letter gate sits between AI throughput and the letter that ships.",
         "Pilot, Firm, and Letter Risk Audit are framed as investment, not a cost center. You buy a path to more volume with the same team, without shipping hallucinated balances. Proof is free to inspect. Production is your system of record, your rules, and your accountability.",
-        "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. We will map Pilot or Firm or a scoped Letter Risk Audit to your shop.",
+        "If wrong dollars cannot leave your building, book twenty minutes with Nathan. Bring the refuse story you just saw. Prices after a real intro. We will map Pilot or Firm or a scoped Letter Risk Audit to your shop.",
     ]
     y = PAGE_H - 1.2 * inch
     for p in paras:
@@ -683,14 +683,14 @@ def convert_copy(c: canvas.Canvas):
             yy -= 0.17 * inch
         y -= 1.55 * inch
 
-    # pricing strip
+    # pricing strip: book first, no list prices
     rounded_rect(c, 0.55 * inch, 0.7 * inch, PAGE_W - 1.1 * inch, 0.85 * inch, r=10, fill=HexColor("#3a2e12"), stroke=HERO)
     c.setFillColor(HERO)
     c.setFont("Helvetica-Bold", 10)
-    c.drawString(0.75 * inch, 1.25 * inch, "PRICING (LOCKED)")
+    c.drawString(0.75 * inch, 1.25 * inch, "PRICING AFTER A REAL INTRO")
     c.setFillColor(TEXT)
     c.setFont("Helvetica-Bold", 11)
-    c.drawString(0.75 * inch, 0.95 * inch, "Pilot $499/mo   ·   SettleUp Firm $1,299/mo   ·   Letter Risk Audit $2,500")
+    c.drawString(0.75 * inch, 0.95 * inch, "Book 20 minutes: calendly.com/nathanplatter. No public list prices.")
     draw_footer(c, "STACK CONVERT", 2)
     c.showPage()
 
@@ -786,7 +786,7 @@ def convert_close(c, page_no):
         "Book a 20-minute walkthrough with Nathan.",
         "Or find him onsite at Brainstorm 2026 Denver.",
         "",
-        "Pilot $499/mo  ·  SettleUp Firm $1,299/mo  ·  Letter Risk Audit $2,500",
+        "Prices after a real intro. No public list prices on this leave-behind.",
         "",
         "calendly.com/nathanplatter",
         "nathanplatteruser.github.io/settleup-booth-kit/",
