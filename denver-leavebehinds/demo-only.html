@@ -97,6 +97,23 @@ a { color:var(--accent); }
 }
 .ops .frame b { color:var(--text); }
 .ops .audit { color:var(--yes); font-size:.85rem; font-weight:650; margin:8px 0 0; }
+.pillars { display:grid; gap:10px; margin:12px 0; }
+@media (min-width:720px) { .pillars { grid-template-columns:1fr 1fr; } }
+.pillar {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px;
+}
+.pillar h3 { margin:0 0 6px; font-size:.95rem; }
+.pillar p { margin:0; color:var(--muted); font-size:.88rem; }
+.offer-block {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:12px 0;
+}
+.offer-block p { margin:0; color:var(--muted); font-size:.9rem; }
+.outlist { margin:8px 0 0; padding-left:1.1rem; color:var(--muted); font-size:.88rem; }
+.outlist li { margin:4px 0; }
+.vendor {
+  margin:12px 0 8px; padding:10px 12px; border:1px solid var(--border); border-radius:8px;
+  font-size:13px; line-height:1.4; color:var(--muted);
+}
 </style>
 </head>
 <body>
@@ -105,31 +122,25 @@ a { color:var(--accent); }
   <span class="pill demo">STACK DEMO · no sales CTAs</span>
 </div>
 <section class="hero">
-  <p class="eyebrow demo">STACK DEMO — Dispute Queue (Nathan · Olga · Ralph)</p>
-  <h1>Re-open what you saw</h1>
-  <p class="subline">Brainstorm 2026 Denver · SettleUp Collections · demo assets only. No Calendly. No pricing. No marketing CTAs.</p>
+  <p class="eyebrow demo">STACK DEMO — Loud Refuse (Nathan · Olga · Ralph)</p>
+  <h1>The letter that almost left. We refused.</h1>
+  <p class="subline">SettleUp Collections is the Level-4 dispute-letter gate: Draft → Check vs ledger → one Remediate → loud Refuse. Human owns Send. Re-open what you saw. Demo assets only. No Calendly. No pricing. No marketing CTAs.</p>
   <div class="mismatch">
-    <div class="box bad"><div class="k">Model wrote</div><div class="v">$1,000</div></div>
+    <div class="box bad"><div class="k">Claim asserted</div><div class="v">$1,000</div></div>
     <div class="vs">vs</div>
     <div class="box good"><div class="k">Ledger</div><div class="v">$20,370.53</div></div>
   </div>
   <div class="stats">
-    <div class="stat"><b>300</b><span>checked</span></div>
-    <div class="stat"><b>20</b><span>remediate</span></div>
-    <div class="stat"><b>19</b><span>fixed</span></div>
-    <div class="stat"><b>1</b><span>refused</span></div>
+    <div class="stat"><b>300</b><span>drafted</span></div>
+    <div class="stat"><b>20</b><span>blocked</span></div>
+    <div class="stat"><b>19</b><span>remediated</span></div>
+    <div class="stat"><b>1</b><span>refuse</span></div>
   </div>
 </section>
 
 <div class="shots">
   <figure>
     <img src="shots/app-remediation.png" alt="Remediation refused letter LTR-300-REFUSED"/>
-
-<div class="vendor" style="margin:12px 0 8px;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:13px;line-height:1.4">
-  <strong>Vendor review (no peacock SOC2):</strong>
-  <a href="https://nathanplatteruser.github.io/security-dpa-faq/">Security &amp; DPA FAQ</a>
-  · Mailto HOLD on magnets · Pilot week-1 checklist on booth laptop /onboarding
-</div>
     <figcaption>What you saw on screen · Remediation · LTR-300-REFUSED (primary visual recall)</figcaption>
   </figure>
   <figure>
@@ -144,6 +155,54 @@ a { color:var(--accent); }
   <b>Ralph Hall</b> (GVH) · setup / deterministic automation
 </div>
 
+<section class="section" id="why">
+  <h2>What you get</h2>
+  <p class="lead">Four pillars. Gate in the workflow. Not annual theater.</p>
+  <div class="pillars">
+    <article class="pillar">
+      <h3>Controls in the workflow</h3>
+      <p>Gate fires at draft time, not in annual theater.</p>
+    </article>
+    <article class="pillar">
+      <h3>Fits your stack</h3>
+      <p>Bolt onto CMS / agency desk. CSV / SFTP / assisted import path.</p>
+    </article>
+    <article class="pillar">
+      <h3>Diligence-grade trust</h3>
+      <p>Claim → ledger → attempts → refuse trail. Admin / Contributor / Compliance.</p>
+    </article>
+    <article class="pillar">
+      <h3>Live in weeks</h3>
+      <p>Pilot wedge on fixtures → your book. Expand when earned.</p>
+    </article>
+  </div>
+  <h2>Capacity with a gate</h2>
+  <p class="lead">More accurate dispute volume with a hard stop when the ledger disagrees. Not headcount cuts.</p>
+  <div class="offer-block">
+    <p>Refuse protects the creditor brand and the agency relationship. We do not pitch SettleUp as a layoff tool. Brand-safe collect: the letter that is still wrong after one remediation does not leave.</p>
+  </div>
+  <h2>Complementary, not a rip-replace</h2>
+  <p class="lead">Recovery platforms own contact, placement, scoring, and digital engage. SettleUp owns letter content risk before Send.</p>
+  <div class="offer-block">
+    <p>We are not a dialer, not a payments portal, not a CMS rip-replace. We sit beside your recovery stack.</p>
+  </div>
+  <h2>Out forever</h2>
+  <ul class="outlist">
+    <li>Unsupervised auto-send</li>
+    <li>Dialer / Reg F contact engine</li>
+    <li>Payments portal</li>
+    <li>CMS rip-replace</li>
+    <li>Claiming we are Equabli</li>
+    <li>SOC 2 badge without evidence</li>
+  </ul>
+</section>
+
+<div class="vendor">
+  <strong>Vendor review (no peacock SOC2):</strong>
+  <a href="https://nathanplatteruser.github.io/security-dpa-faq/">Security &amp; DPA FAQ</a>
+  · Soft ROI · Mailto HOLD on magnets · Pilot week-1 checklist on booth laptop /onboarding
+  · Booking CTA lives on the CONVERT leave-behind (Calendly). This pack stays demo-only.
+</div>
 
 <div class="ops" id="olga-ops">
   <h2>Ops callout · Olga’s FTE (locked)</h2>

@@ -179,6 +179,24 @@ footer {
   margin-top:28px; color:var(--muted); font-size:.75rem; border-top:1px solid var(--border);
   padding-top:14px;
 }
+.pillars { display:grid; gap:10px; }
+@media (min-width:720px) { .pillars { grid-template-columns:1fr 1fr; } }
+.pillar {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px;
+}
+.pillar h3 { margin:0 0 6px; font-size:.95rem; }
+.pillar p { margin:0; color:var(--muted); font-size:.88rem; }
+.offer-block {
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:0 0 12px;
+}
+.offer-block p { margin:0; color:var(--muted); font-size:.9rem; }
+.outlist { margin:8px 0 0; padding-left:1.1rem; color:var(--muted); font-size:.88rem; }
+.outlist li { margin:4px 0; }
+.hold {
+  background:#121a24; border:1px solid var(--border); border-radius:14px;
+  padding:12px 14px; margin:12px 0 0; color:var(--muted); font-size:.88rem;
+}
+.hold b { color:var(--text); }
 @media print {
   body { background:#fff; color:#000; padding:12px; }
   .nav, .actions, .script { display:none !important; }
@@ -196,11 +214,11 @@ footer {
 </div>
 
 <section class="hero" id="top">
-  <p class="eyebrow">Refuse over hallucinate</p>
-  <h1>We <em>refused</em>. Wrong dollars don’t leave the building.</h1>
+  <p class="eyebrow">Loud Refuse · Level-4 letter gate</p>
+  <h1>The letter that almost left. We <em>refused</em>.</h1>
   <div class="mismatch">
     <div class="box bad">
-      <div class="k">Model wrote</div>
+      <div class="k">Claim asserted</div>
       <div class="v">$1,000</div>
     </div>
     <div class="vs">VS</div>
@@ -215,11 +233,12 @@ footer {
     <div class="stat"><b>19</b><span>remediated</span></div>
     <div class="stat"><b>1</b><span>hard refuse</span></div>
   </div>
-  <p class="subline">Letter-risk gate for collections dispute responses. Capacity you can defend - not a cost center that ships unsupported facts.</p>
+  <p class="subline">SettleUp Collections is the Level-4 dispute-letter gate: Draft → Check vs ledger → one Remediate → loud Refuse. Human owns Send. We sit beside your recovery stack. We do not replace dialer, payments, or CMS. Default demo: claim asserted $1,000 × 3 vs ledger $20,370.53. Still wrong after one remediation → <strong>REFUSED</strong>, inspectable reason, operator escalation.</p>
 </section>
 
 <nav class="nav" aria-label="Jump">
   <div class="chips">
+    <a class="chip" href="#why">Why us</a>
     <a class="chip" href="#demo">Demo</a>
     <a class="chip" href="#book">Book</a>
     <a class="chip" href="#pricing">Book intro</a>
@@ -228,6 +247,48 @@ footer {
     <a class="chip" href="#qrwall">QR wall</a>
   </div>
 </nav>
+
+<section class="section" id="why">
+  <h2>What you get</h2>
+  <p class="lead">Four pillars. Gate in the workflow. Not annual theater.</p>
+  <div class="pillars">
+    <article class="pillar">
+      <h3>Controls in the workflow</h3>
+      <p>Gate fires at draft time, not in annual theater.</p>
+    </article>
+    <article class="pillar">
+      <h3>Fits your stack</h3>
+      <p>Bolt onto CMS / agency desk. CSV / SFTP / assisted import path.</p>
+    </article>
+    <article class="pillar">
+      <h3>Diligence-grade trust</h3>
+      <p>Claim → ledger → attempts → refuse trail. Admin / Contributor / Compliance.</p>
+    </article>
+    <article class="pillar">
+      <h3>Live in weeks</h3>
+      <p>Pilot wedge on fixtures → your book. Expand when earned.</p>
+    </article>
+  </div>
+  <h2 style="margin-top:22px">Capacity with a gate</h2>
+  <p class="lead">More accurate dispute volume with a hard stop when the ledger disagrees. Not headcount cuts.</p>
+  <div class="offer-block">
+    <p>Refuse protects the creditor brand and the agency relationship. We do not pitch SettleUp as a layoff tool. Brand-safe collect: the letter that is still wrong after one remediation does not leave.</p>
+  </div>
+  <h2>Complementary, not a rip-replace</h2>
+  <p class="lead">Recovery platforms own contact, placement, scoring, and digital engage. SettleUp owns letter content risk before Send.</p>
+  <div class="offer-block">
+    <p>We are not a dialer, not a payments portal, not a CMS rip-replace. We sit beside your recovery stack.</p>
+  </div>
+  <h2>Out forever</h2>
+  <ul class="outlist">
+    <li>Unsupervised auto-send</li>
+    <li>Dialer / Reg F contact engine</li>
+    <li>Payments portal</li>
+    <li>CMS rip-replace</li>
+    <li>Claiming we are Equabli</li>
+    <li>SOC 2 badge without evidence</li>
+  </ul>
+</section>
 
 <section class="section" id="demo">
   <h2>Live refused-letter demo</h2>
@@ -247,7 +308,8 @@ footer {
 
 <section class="section" id="book">
   <h2>Book 20-min discovery</h2>
-  <p class="lead">Primary aisle CTA. Don’t buy from the aisle - walk the refuse on your stack next week.</p>
+  <p class="lead">Primary aisle CTA. Book a walkthrough. No public price sheet.</p>
+  <div class="hold"><b>Soft ROI · Mailto HOLD.</b> No dollar Soft ROI on this page. Email Nathan via portfolio contact if Calendly is the wrong door.</div>
   <div class="tiles">
     <article class="tile">
       <div class="qrwrap"><img class="qr" alt="QR to Calendly" src="data:image/png;base64,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"/></div>
@@ -263,7 +325,7 @@ footer {
 
 <section class="section" id="pricing">
   <h2>Book intro</h2>
-  <p class="lead">Book 20 minutes. Printed QRs that said Pricing land here. No aisle price talk.</p>
+  <p class="lead">Book 20 minutes. Printed QRs that said Pricing land here. Calendly only. No public price sheet.</p>
   <div class="tiles">
     <article class="tile">
       <div class="qrwrap"><img class="qr" alt="QR to Calendly" src="data:image/png;base64,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"/></div>
